@@ -1,0 +1,31 @@
+# Render Blueprint, free plan: the whole backend in ONE free web service, for testers.
+# https://render.com/docs/blueprint-spec
+#
+# The API process also runs the worker (RUN_WORKER_IN_API), with a SQLite file and an
+# in-memory cache instead of Postgres and Redis. Limits of the free plan:
+#  - The service sleeps after 15 minutes without visitors. The next visit wakes it in
+#    about a minute (the app shows "Couldn't load", then Retry works), and its data is
+#    rebuilt from the provider. Live scores only update while someone is using it.
+#  - No push notifications (they need the Firebase file, and the service must stay awake).
+# For the store launch, use render.production.yaml instead (always-on worker, Postgres, Redis).
+services:
+  - type: web
+    name: bgoal-api
+    runtime: docker
+    rootDir: backend
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: RUN_WORKER_IN_API
+        value: "true"
+      - key: DATABASE_URL
+        value: sqlite+aiosqlite:////tmp/bgoal.db
+      - key: REDIS_URL
+        value: memory://
+      # "mock" shows simulated matches and needs no key. For real matches, set
+      # PROVIDER=football_data and FOOTBALL_DATA_API_KEY (free at football-data.org)
+      # in the service's Environment tab.
+      - key: PROVIDER
+        value: mock
+      - key: FOOTBALL_DATA_API_KEY
+        sync: false

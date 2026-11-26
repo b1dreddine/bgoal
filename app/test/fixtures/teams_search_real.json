@@ -1,0 +1,20 @@
+{
+ "data": [
+  {
+   "id": 94,
+   "name": "Villarreal CF",
+   "short_name": "Villarreal",
+   "tla": "VIL",
+   "crest_url": "https://crests.football-data.org/94.png",
+   "country": "Spain"
+  },
+  {
+   "id": 86,
+   "name": "Real Madrid CF",
+   "short_name": "Real Madrid",
+   "tla": "RMA",
+   "crest_url": "https://crests.football-data.org/86.png",
+   "country": "Spain"
+  }
+ ]
+}

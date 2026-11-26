@@ -1,0 +1,670 @@
+{
+ "data": [
+  {
+   "id": 2026102800,
+   "competition": {
+    "id": 2021,
+    "name": "Premier League",
+    "code": "PL",
+    "country": "England",
+    "emblem_url": "https://crests.football-data.org/PL.png"
+   },
+   "utc_kickoff": "2026-10-28T17:25:00Z",
+   "status": "live",
+   "minute": 36,
+   "injury_time": null,
+   "home": {
+    "id": 61,
+    "name": "Chelsea FC",
+    "short_name": "Chelsea",
+    "tla": "CHE",
+    "crest_url": "https://crests.football-data.org/61.png",
+    "country": "England"
+   },
+   "away": {
+    "id": 67,
+    "name": "Newcastle United FC",
+    "short_name": "Newcastle",
+    "tla": "NEW",
+    "crest_url": "https://crests.football-data.org/67.png",
+    "country": "England"
+   },
+   "score": {
+    "home": 0,
+    "away": 0,
+    "ht_home": null,
+    "ht_away": null,
+    "pen_home": null,
+    "pen_away": null,
+    "duration": "regular"
+   },
+   "venue": "Chelsea Stadium",
+   "events": [
+    {
+     "type": "yellow_card",
+     "minute": 6,
+     "extra_minute": null,
+     "team_id": 67,
+     "player_id": 6710,
+     "player_name": "A. Walker",
+     "related_player_id": null,
+     "related_player_name": null,
+     "detail": null
+    },
+    {
+     "type": "yellow_card",
+     "minute": 27,
+     "extra_minute": null,
+     "team_id": 61,
+     "player_id": 6109,
+     "player_name": "A. Silva",
+     "related_player_id": null,
+     "related_player_name": null,
+     "detail": null
+    },
+    {
+     "type": "yellow_card",
+     "minute": 28,
+     "extra_minute": null,
+     "team_id": 67,
+     "player_id": 6708,
+     "player_name": "X. Okafor",
+     "related_player_id": null,
+     "related_player_name": null,
+     "detail": null
+    }
+   ],
+   "lineups": [],
+   "stats": null,
+   "has_event_data": true
+  },
+  {
+   "id": 2026102801,
+   "competition": {
+    "id": 2021,
+    "name": "Premier League",
+    "code": "PL",
+    "country": "England",
+    "emblem_url": "https://crests.football-data.org/PL.png"
+   },
+   "utc_kickoff": "2026-10-28T17:05:00Z",
+   "status": "halftime",
+   "minute": 45,
+   "injury_time": null,
+   "home": {
+    "id": 73,
+    "name": "Tottenham Hotspur FC",
+    "short_name": "Tottenham",
+    "tla": "TOT",
+    "crest_url": "https://crests.football-data.org/73.png",
+    "country": "England"
+   },
+   "away": {
+    "id": 58,
+    "name": "Aston Villa FC",
+    "short_name": "Aston Villa",
+    "tla": "AVL",
+    "crest_url": "https://crests.football-data.org/58.png",
+    "country": "England"
+   },
+   "score": {
+    "home": 1,
+    "away": 0,
+    "ht_home": 1,
+    "ht_away": 0,
+    "pen_home": null,
+    "pen_away": null,
+    "duration": "regular"
+   },
+   "venue": "Tottenham Stadium",
+   "events": [
+    {
+     "type": "goal",
+     "minute": 15,
+     "extra_minute": null,
+     "team_id": 73,
+     "player_id": 7307,
+     "player_name": "P. Costa",
+     "related_player_id": 7310,
+     "related_player_name": "F. Rossi",
+     "detail": null
+    }
+   ],
+   "lineups": [],
+   "stats": null,
+   "has_event_data": true
+  },
+  {
+   "id": 2026102802,
+   "competition": {
+    "id": 2021,
+    "name": "Premier League",
+    "code": "PL",
+    "country": "England",
+    "emblem_url": "https://crests.football-data.org/PL.png"
+   },
+   "utc_kickoff": "2026-10-28T15:50:00Z",
+   "status": "finished",
+   "minute": null,
+   "injury_time": null,
+   "home": {
+    "id": 64,
+    "name": "Liverpool FC",
+    "short_name": "Liverpool",
+    "tla": "LIV",
+    "crest_url": "https://crests.football-data.org/64.png",
+    "country": "England"
+   },
+   "away": {
+    "id": 65,
+    "name": "Manchester City FC",
+    "short_name": "Man City",
+    "tla": "MCI",
+    "crest_url": "https://crests.football-data.org/65.png",
+    "country": "England"
+   },
+   "score": {
+    "home": 1,
+    "away": 1,
+    "ht_home": 1,
+    "ht_away": 0,
+    "pen_home": null,
+    "pen_away": null,
+    "duration": "regular"
+   },
+   "venue": "Liverpool Stadium",
+   "events": [
+    {
+     "type": "goal",
+     "minute": 13,
+     "extra_minute": null,
+     "team_id": 64,
+     "player_id": 6407,
+     "player_name": "S. Müller",
+     "related_player_id": 6408,
+     "related_player_name": "B. Fernandes",
+     "detail": null
+    },
+    {
+     "type": "yellow_card",
+     "minute": 16,
+     "extra_minute": null,
+     "team_id": 65,
+     "player_id": 6504,
+     "player_name": "W. Haddad",
+     "related_player_id": null,
+     "related_player_name": null,
+     "detail": null
+    },
+    {
+     "type": "substitution",
+     "minute": 67,
+     "extra_minute": null,
+     "team_id": 65,
+     "player_id": 6508,
+     "player_name": "F. Rahman",
+     "related_player_id": 6515,
+     "related_player_name": "E. Müller",
+     "detail": null
+    },
+    {
+     "type": "substitution",
+     "minute": 75,
+     "extra_minute": null,
+     "team_id": 64,
+     "player_id": 6409,
+     "player_name": "S. Costa",
+     "related_player_id": 6416,
+     "related_player_name": "Y. Benali",
+     "detail": null
+    },
+    {
+     "type": "substitution",
+     "minute": 76,
+     "extra_minute": null,
+     "team_id": 64,
+     "player_id": 6410,
+     "player_name": "I. Novak",
+     "related_player_id": 6417,
+     "related_player_name": "O. Mendy",
+     "detail": null
+    },
+    {
+     "type": "substitution",
+     "minute": 81,
+     "extra_minute": null,
+     "team_id": 64,
+     "player_id": 6408,
+     "player_name": "B. Fernandes",
+     "related_player_id": 6415,
+     "related_player_name": "A. Garcia",
+     "detail": null
+    },
+    {
+     "type": "substitution",
+     "minute": 81,
+     "extra_minute": null,
+     "team_id": 65,
+     "player_id": 6510,
+     "player_name": "X. Saka",
+     "related_player_id": 6517,
+     "related_player_name": "L. Kane",
+     "detail": null
+    },
+    {
+     "type": "goal",
+     "minute": 83,
+     "extra_minute": null,
+     "team_id": 65,
+     "player_id": 6510,
+     "player_name": "X. Saka",
+     "related_player_id": 6505,
+     "related_player_name": "B. Johnson",
+     "detail": null
+    },
+    {
+     "type": "substitution",
+     "minute": 83,
+     "extra_minute": null,
+     "team_id": 65,
+     "player_id": 6509,
+     "player_name": "Q. Larsen",
+     "related_player_id": 6516,
+     "related_player_name": "W. Dubois",
+     "detail": null
+    }
+   ],
+   "lineups": [],
+   "stats": null,
+   "has_event_data": true
+  },
+  {
+   "id": 2026102803,
+   "competition": {
+    "id": 2021,
+    "name": "Premier League",
+    "code": "PL",
+    "country": "England",
+    "emblem_url": "https://crests.football-data.org/PL.png"
+   },
+   "utc_kickoff": "2026-10-28T18:14:00Z",
+   "status": "scheduled",
+   "minute": null,
+   "injury_time": null,
+   "home": {
+    "id": 66,
+    "name": "Manchester United FC",
+    "short_name": "Man United",
+    "tla": "MUN",
+    "crest_url": "https://crests.football-data.org/66.png",
+    "country": "England"
+   },
+   "away": {
+    "id": 57,
+    "name": "Arsenal FC",
+    "short_name": "Arsenal",
+    "tla": "ARS",
+    "crest_url": "https://crests.football-data.org/57.png",
+    "country": "England"
+   },
+   "score": {
+    "home": null,
+    "away": null,
+    "ht_home": null,
+    "ht_away": null,
+    "pen_home": null,
+    "pen_away": null,
+    "duration": "regular"
+   },
+   "venue": "Man United Stadium",
+   "events": [],
+   "lineups": [],
+   "stats": null,
+   "has_event_data": true
+  },
+  {
+   "id": 2026102804,
+   "competition": {
+    "id": 2014,
+    "name": "Primera Division",
+    "code": "PD",
+    "country": "Spain",
+    "emblem_url": "https://crests.football-data.org/PD.png"
+   },
+   "utc_kickoff": "2026-10-28T19:30:00Z",
+   "status": "scheduled",
+   "minute": null,
+   "injury_time": null,
+   "home": {
+    "id": 86,
+    "name": "Real Madrid CF",
+    "short_name": "Real Madrid",
+    "tla": "RMA",
+    "crest_url": "https://crests.football-data.org/86.png",
+    "country": "Spain"
+   },
+   "away": {
+    "id": 94,
+    "name": "Villarreal CF",
+    "short_name": "Villarreal",
+    "tla": "VIL",
+    "crest_url": "https://crests.football-data.org/94.png",
+    "country": "Spain"
+   },
+   "score": {
+    "home": null,
+    "away": null,
+    "ht_home": null,
+    "ht_away": null,
+    "pen_home": null,
+    "pen_away": null,
+    "duration": "regular"
+   },
+   "venue": "Real Madrid Stadium",
+   "events": [],
+   "lineups": [],
+   "stats": null,
+   "has_event_data": true
+  },
+  {
+   "id": 2026102805,
+   "competition": {
+    "id": 2014,
+    "name": "Primera Division",
+    "code": "PD",
+    "country": "Spain",
+    "emblem_url": "https://crests.football-data.org/PD.png"
+   },
+   "utc_kickoff": "2026-10-28T21:00:00Z",
+   "status": "scheduled",
+   "minute": null,
+   "injury_time": null,
+   "home": {
+    "id": 95,
+    "name": "Valencia CF",
+    "short_name": "Valencia",
+    "tla": "VAL",
+    "crest_url": "https://crests.football-data.org/95.png",
+    "country": "Spain"
+   },
+   "away": {
+    "id": 559,
+    "name": "Sevilla FC",
+    "short_name": "Sevilla",
+    "tla": "SEV",
+    "crest_url": "https://crests.football-data.org/559.png",
+    "country": "Spain"
+   },
+   "score": {
+    "home": null,
+    "away": null,
+    "ht_home": null,
+    "ht_away": null,
+    "pen_home": null,
+    "pen_away": null,
+    "duration": "regular"
+   },
+   "venue": "Valencia Stadium",
+   "events": [],
+   "lineups": [],
+   "stats": null,
+   "has_event_data": true
+  },
+  {
+   "id": 2026102806,
+   "competition": {
+    "id": 2014,
+    "name": "Primera Division",
+    "code": "PD",
+    "country": "Spain",
+    "emblem_url": "https://crests.football-data.org/PD.png"
+   },
+   "utc_kickoff": "2026-10-28T14:40:00Z",
+   "status": "finished",
+   "minute": null,
+   "injury_time": null,
+   "home": {
+    "id": 78,
+    "name": "Club Atlético de Madrid",
+    "short_name": "Atleti",
+    "tla": "ATM",
+    "crest_url": "https://crests.football-data.org/78.png",
+    "country": "Spain"
+   },
+   "away": {
+    "id": 81,
+    "name": "FC Barcelona",
+    "short_name": "Barça",
+    "tla": "FCB",
+    "crest_url": "https://crests.football-data.org/81.png",
+    "country": "Spain"
+   },
+   "score": {
+    "home": 4,
+    "away": 0,
+    "ht_home": 3,
+    "ht_away": 0,
+    "pen_home": null,
+    "pen_away": null,
+    "duration": "regular"
+   },
+   "venue": "Atleti Stadium",
+   "events": [
+    {
+     "type": "goal",
+     "minute": 12,
+     "extra_minute": null,
+     "team_id": 78,
+     "player_id": 7809,
+     "player_name": "Y. Ziyech",
+     "related_player_id": 7810,
+     "related_player_name": "L. Rahman",
+     "detail": null
+    },
+    {
+     "type": "penalty_goal",
+     "minute": 33,
+     "extra_minute": null,
+     "team_id": 78,
+     "player_id": 7806,
+     "player_name": "F. Müller",
+     "related_player_id": null,
+     "related_player_name": null,
+     "detail": null
+    },
+    {
+     "type": "goal",
+     "minute": 36,
+     "extra_minute": null,
+     "team_id": 78,
+     "player_id": 7808,
+     "player_name": "Y. Novak",
+     "related_player_id": 7810,
+     "related_player_name": "L. Rahman",
+     "detail": null
+    },
+    {
+     "type": "yellow_card",
+     "minute": 52,
+     "extra_minute": null,
+     "team_id": 78,
+     "player_id": 7801,
+     "player_name": "N. Diaz",
+     "related_player_id": null,
+     "related_player_name": null,
+     "detail": null
+    },
+    {
+     "type": "substitution",
+     "minute": 60,
+     "extra_minute": null,
+     "team_id": 78,
+     "player_id": 7808,
+     "player_name": "Y. Novak",
+     "related_player_id": 7815,
+     "related_player_name": "D. Costa",
+     "detail": null
+    },
+    {
+     "type": "substitution",
+     "minute": 62,
+     "extra_minute": null,
+     "team_id": 78,
+     "player_id": 7809,
+     "player_name": "Y. Ziyech",
+     "related_player_id": 7816,
+     "related_player_name": "G. Mendy",
+     "detail": null
+    },
+    {
+     "type": "substitution",
+     "minute": 62,
+     "extra_minute": null,
+     "team_id": 81,
+     "player_id": 8108,
+     "player_name": "Y. Silva",
+     "related_player_id": 8115,
+     "related_player_name": "K. Fernandes",
+     "detail": null
+    },
+    {
+     "type": "substitution",
+     "minute": 63,
+     "extra_minute": null,
+     "team_id": 81,
+     "player_id": 8109,
+     "player_name": "J. Kane",
+     "related_player_id": 8116,
+     "related_player_name": "F. Ito",
+     "detail": null
+    },
+    {
+     "type": "substitution",
+     "minute": 80,
+     "extra_minute": null,
+     "team_id": 81,
+     "player_id": 8110,
+     "player_name": "S. Ziyech",
+     "related_player_id": 8117,
+     "related_player_name": "M. Rossi",
+     "detail": null
+    },
+    {
+     "type": "substitution",
+     "minute": 85,
+     "extra_minute": null,
+     "team_id": 78,
+     "player_id": 7810,
+     "player_name": "L. Rahman",
+     "related_player_id": 7817,
+     "related_player_name": "E. Saka",
+     "detail": null
+    },
+    {
+     "type": "penalty_goal",
+     "minute": 87,
+     "extra_minute": null,
+     "team_id": 78,
+     "player_id": 7809,
+     "player_name": "Y. Ziyech",
+     "related_player_id": null,
+     "related_player_name": null,
+     "detail": null
+    }
+   ],
+   "lineups": [],
+   "stats": null,
+   "has_event_data": true
+  },
+  {
+   "id": 2026102807,
+   "competition": {
+    "id": 2015,
+    "name": "Ligue 1",
+    "code": "FL1",
+    "country": "France",
+    "emblem_url": "https://crests.football-data.org/FL1.png"
+   },
+   "utc_kickoff": "2026-10-28T22:00:00Z",
+   "status": "postponed",
+   "minute": null,
+   "injury_time": null,
+   "home": {
+    "id": 516,
+    "name": "Olympique de Marseille",
+    "short_name": "Marseille",
+    "tla": "MAR",
+    "crest_url": "https://crests.football-data.org/516.png",
+    "country": "France"
+   },
+   "away": {
+    "id": 523,
+    "name": "Olympique Lyonnais",
+    "short_name": "Lyon",
+    "tla": "OL",
+    "crest_url": "https://crests.football-data.org/523.png",
+    "country": "France"
+   },
+   "score": {
+    "home": null,
+    "away": null,
+    "ht_home": null,
+    "ht_away": null,
+    "pen_home": null,
+    "pen_away": null,
+    "duration": "regular"
+   },
+   "venue": "Marseille Stadium",
+   "events": [],
+   "lineups": [],
+   "stats": null,
+   "has_event_data": true
+  },
+  {
+   "id": 2026102808,
+   "competition": {
+    "id": 2015,
+    "name": "Ligue 1",
+    "code": "FL1",
+    "country": "France",
+    "emblem_url": "https://crests.football-data.org/FL1.png"
+   },
+   "utc_kickoff": "2026-10-28T23:00:00Z",
+   "status": "scheduled",
+   "minute": null,
+   "injury_time": null,
+   "home": {
+    "id": 524,
+    "name": "Paris Saint-Germain FC",
+    "short_name": "PSG",
+    "tla": "PSG",
+    "crest_url": "https://crests.football-data.org/524.png",
+    "country": "France"
+   },
+   "away": {
+    "id": 548,
+    "name": "AS Monaco FC",
+    "short_name": "Monaco",
+    "tla": "ASM",
+    "crest_url": "https://crests.football-data.org/548.png",
+    "country": "France"
+   },
+   "score": {
+    "home": null,
+    "away": null,
+    "ht_home": null,
+    "ht_away": null,
+    "pen_home": null,
+    "pen_away": null,
+    "duration": "regular"
+   },
+   "venue": "PSG Stadium",
+   "events": [],
+   "lineups": [],
+   "stats": null,
+   "has_event_data": true
+  }
+ ],
+ "updated_at": "2026-10-28T18:00:00+00:00",
+ "stale": false
+}

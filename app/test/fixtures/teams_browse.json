@@ -1,0 +1,181 @@
+{
+ "data": [
+  {
+   "competition": {
+    "id": 2015,
+    "name": "Ligue 1",
+    "code": "FL1",
+    "country": "France",
+    "emblem_url": "https://crests.football-data.org/FL1.png"
+   },
+   "teams": [
+    {
+     "id": 548,
+     "name": "AS Monaco FC",
+     "short_name": "Monaco",
+     "tla": "ASM",
+     "crest_url": "https://crests.football-data.org/548.png",
+     "country": "France"
+    },
+    {
+     "id": 523,
+     "name": "Olympique Lyonnais",
+     "short_name": "Lyon",
+     "tla": "OL",
+     "crest_url": "https://crests.football-data.org/523.png",
+     "country": "France"
+    },
+    {
+     "id": 516,
+     "name": "Olympique de Marseille",
+     "short_name": "Marseille",
+     "tla": "MAR",
+     "crest_url": "https://crests.football-data.org/516.png",
+     "country": "France"
+    },
+    {
+     "id": 524,
+     "name": "Paris Saint-Germain FC",
+     "short_name": "PSG",
+     "tla": "PSG",
+     "crest_url": "https://crests.football-data.org/524.png",
+     "country": "France"
+    }
+   ]
+  },
+  {
+   "competition": {
+    "id": 2021,
+    "name": "Premier League",
+    "code": "PL",
+    "country": "England",
+    "emblem_url": "https://crests.football-data.org/PL.png"
+   },
+   "teams": [
+    {
+     "id": 57,
+     "name": "Arsenal FC",
+     "short_name": "Arsenal",
+     "tla": "ARS",
+     "crest_url": "https://crests.football-data.org/57.png",
+     "country": "England"
+    },
+    {
+     "id": 58,
+     "name": "Aston Villa FC",
+     "short_name": "Aston Villa",
+     "tla": "AVL",
+     "crest_url": "https://crests.football-data.org/58.png",
+     "country": "England"
+    },
+    {
+     "id": 61,
+     "name": "Chelsea FC",
+     "short_name": "Chelsea",
+     "tla": "CHE",
+     "crest_url": "https://crests.football-data.org/61.png",
+     "country": "England"
+    },
+    {
+     "id": 64,
+     "name": "Liverpool FC",
+     "short_name": "Liverpool",
+     "tla": "LIV",
+     "crest_url": "https://crests.football-data.org/64.png",
+     "country": "England"
+    },
+    {
+     "id": 65,
+     "name": "Manchester City FC",
+     "short_name": "Man City",
+     "tla": "MCI",
+     "crest_url": "https://crests.football-data.org/65.png",
+     "country": "England"
+    },
+    {
+     "id": 66,
+     "name": "Manchester United FC",
+     "short_name": "Man United",
+     "tla": "MUN",
+     "crest_url": "https://crests.football-data.org/66.png",
+     "country": "England"
+    },
+    {
+     "id": 67,
+     "name": "Newcastle United FC",
+     "short_name": "Newcastle",
+     "tla": "NEW",
+     "crest_url": "https://crests.football-data.org/67.png",
+     "country": "England"
+    },
+    {
+     "id": 73,
+     "name": "Tottenham Hotspur FC",
+     "short_name": "Tottenham",
+     "tla": "TOT",
+     "crest_url": "https://crests.football-data.org/73.png",
+     "country": "England"
+    }
+   ]
+  },
+  {
+   "competition": {
+    "id": 2014,
+    "name": "Primera Division",
+    "code": "PD",
+    "country": "Spain",
+    "emblem_url": "https://crests.football-data.org/PD.png"
+   },
+   "teams": [
+    {
+     "id": 78,
+     "name": "Club Atlético de Madrid",
+     "short_name": "Atleti",
+     "tla": "ATM",
+     "crest_url": "https://crests.football-data.org/78.png",
+     "country": "Spain"
+    },
+    {
+     "id": 81,
+     "name": "FC Barcelona",
+     "short_name": "Barça",
+     "tla": "FCB",
+     "crest_url": "https://crests.football-data.org/81.png",
+     "country": "Spain"
+    },
+    {
+     "id": 86,
+     "name": "Real Madrid CF",
+     "short_name": "Real Madrid",
+     "tla": "RMA",
+     "crest_url": "https://crests.football-data.org/86.png",
+     "country": "Spain"
+    },
+    {
+     "id": 559,
+     "name": "Sevilla FC",
+     "short_name": "Sevilla",
+     "tla": "SEV",
+     "crest_url": "https://crests.football-data.org/559.png",
+     "country": "Spain"
+    },
+    {
+     "id": 95,
+     "name": "Valencia CF",
+     "short_name": "Valencia",
+     "tla": "VAL",
+     "crest_url": "https://crests.football-data.org/95.png",
+     "country": "Spain"
+    },
+    {
+     "id": 94,
+     "name": "Villarreal CF",
+     "short_name": "Villarreal",
+     "tla": "VIL",
+     "crest_url": "https://crests.football-data.org/94.png",
+     "country": "Spain"
+    }
+   ]
+  }
+ ]
+}

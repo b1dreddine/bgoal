@@ -1,0 +1,48 @@
+# Render Blueprint for the store launch: https://render.com/docs/blueprint-spec
+# (render.yaml is the free single-service setup for testing.) To use this one: Render
+# dashboard -> New -> Blueprint -> pick the repo -> Blueprint path: render.production.yaml
+# Free web service + free Postgres + free Key Value (Redis). The worker needs a paid
+# "starter" background worker (free instances sleep, which would stop live polling).
+services:
+  - type: web
+    name: livescores-api
+    runtime: docker
+    rootDir: backend
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase: { name: livescores-db, property: connectionString }
+      - key: REDIS_URL
+        fromService: { type: keyvalue, name: livescores-redis, property: connectionString }
+      - key: PROVIDER
+        value: football_data
+      - key: FOOTBALL_DATA_API_KEY
+        sync: false
+
+  - type: worker
+    name: livescores-worker
+    runtime: docker
+    rootDir: backend
+    plan: starter
+    dockerCommand: python -m app.worker
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase: { name: livescores-db, property: connectionString }
+      - key: REDIS_URL
+        fromService: { type: keyvalue, name: livescores-redis, property: connectionString }
+      - key: PROVIDER
+        value: football_data
+      - key: FOOTBALL_DATA_API_KEY
+        sync: false
+      - key: FIREBASE_CREDENTIALS_FILE
+        value: /etc/secrets/firebase-service-account.json  # add as a Render "Secret File"
+
+  - type: keyvalue
+    name: livescores-redis
+    plan: free
+    ipAllowList: []
+
+databases:
+  - name: livescores-db
+    plan: free

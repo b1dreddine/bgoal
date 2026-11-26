@@ -1,0 +1,1153 @@
+{
+ "2026102800": {
+  "data": {
+   "id": 2026102800,
+   "competition": {
+    "id": 2021,
+    "name": "Premier League",
+    "code": "PL",
+    "country": "England",
+    "emblem_url": "https://crests.football-data.org/PL.png"
+   },
+   "utc_kickoff": "2026-10-28T17:25:00Z",
+   "status": "live",
+   "minute": 36,
+   "injury_time": null,
+   "home": {
+    "id": 61,
+    "name": "Chelsea FC",
+    "short_name": "Chelsea",
+    "tla": "CHE",
+    "crest_url": "https://crests.football-data.org/61.png",
+    "country": "England"
+   },
+   "away": {
+    "id": 67,
+    "name": "Newcastle United FC",
+    "short_name": "Newcastle",
+    "tla": "NEW",
+    "crest_url": "https://crests.football-data.org/67.png",
+    "country": "England"
+   },
+   "score": {
+    "home": 0,
+    "away": 0,
+    "ht_home": null,
+    "ht_away": null,
+    "pen_home": null,
+    "pen_away": null,
+    "duration": "regular"
+   },
+   "venue": "Chelsea Stadium",
+   "events": [
+    {
+     "type": "yellow_card",
+     "minute": 6,
+     "extra_minute": null,
+     "team_id": 67,
+     "player_id": 6710,
+     "player_name": "A. Walker",
+     "related_player_id": null,
+     "related_player_name": null,
+     "detail": null
+    },
+    {
+     "type": "yellow_card",
+     "minute": 27,
+     "extra_minute": null,
+     "team_id": 61,
+     "player_id": 6109,
+     "player_name": "A. Silva",
+     "related_player_id": null,
+     "related_player_name": null,
+     "detail": null
+    },
+    {
+     "type": "yellow_card",
+     "minute": 28,
+     "extra_minute": null,
+     "team_id": 67,
+     "player_id": 6708,
+     "player_name": "X. Okafor",
+     "related_player_id": null,
+     "related_player_name": null,
+     "detail": null
+    }
+   ],
+   "lineups": [
+    {
+     "team_id": 61,
+     "formation": "4-3-3",
+     "coach": "Coach CHE",
+     "starting": [
+      {
+       "id": 6100,
+       "name": "K. Larsen",
+       "number": 1,
+       "position": "G",
+       "grid": null
+      },
+      {
+       "id": 6101,
+       "name": "U. Saka",
+       "number": 2,
+       "position": "D",
+       "grid": null
+      },
+      {
+       "id": 6102,
+       "name": "A. Rahman",
+       "number": 3,
+       "position": "D",
+       "grid": null
+      },
+      {
+       "id": 6103,
+       "name": "Q. Rossi",
+       "number": 4,
+       "position": "D",
+       "grid": null
+      },
+      {
+       "id": 6104,
+       "name": "W. Novak",
+       "number": 5,
+       "position": "D",
+       "grid": null
+      },
+      {
+       "id": 6105,
+       "name": "C. Okafor",
+       "number": 6,
+       "position": "M",
+       "grid": null
+      },
+      {
+       "id": 6106,
+       "name": "U. Ito",
+       "number": 7,
+       "position": "M",
+       "grid": null
+      },
+      {
+       "id": 6107,
+       "name": "F. Dubois",
+       "number": 8,
+       "position": "M",
+       "grid": null
+      },
+      {
+       "id": 6108,
+       "name": "K. Fernandes",
+       "number": 9,
+       "position": "F",
+       "grid": null
+      },
+      {
+       "id": 6109,
+       "name": "A. Silva",
+       "number": 10,
+       "position": "F",
+       "grid": null
+      },
+      {
+       "id": 6110,
+       "name": "N. Haddad",
+       "number": 11,
+       "position": "F",
+       "grid": null
+      }
+     ],
+     "substitutes": [
+      {
+       "id": 6111,
+       "name": "Z. Walker",
+       "number": 12,
+       "position": "G",
+       "grid": null
+      },
+      {
+       "id": 6112,
+       "name": "E. Ziyech",
+       "number": 13,
+       "position": "D",
+       "grid": null
+      },
+      {
+       "id": 6113,
+       "name": "E. Martin",
+       "number": 14,
+       "position": "D",
+       "grid": null
+      },
+      {
+       "id": 6114,
+       "name": "X. Costa",
+       "number": 15,
+       "position": "M",
+       "grid": null
+      },
+      {
+       "id": 6115,
+       "name": "M. Diaz",
+       "number": 16,
+       "position": "M",
+       "grid": null
+      },
+      {
+       "id": 6116,
+       "name": "J. Kane",
+       "number": 17,
+       "position": "F",
+       "grid": null
+      },
+      {
+       "id": 6117,
+       "name": "J. Benali",
+       "number": 18,
+       "position": "F",
+       "grid": null
+      }
+     ]
+    },
+    {
+     "team_id": 67,
+     "formation": "4-3-3",
+     "coach": "Coach NEW",
+     "starting": [
+      {
+       "id": 6700,
+       "name": "F. Kane",
+       "number": 1,
+       "position": "G",
+       "grid": null
+      },
+      {
+       "id": 6701,
+       "name": "D. Diaz",
+       "number": 2,
+       "position": "D",
+       "grid": null
+      },
+      {
+       "id": 6702,
+       "name": "V. Garcia",
+       "number": 3,
+       "position": "D",
+       "grid": null
+      },
+      {
+       "id": 6703,
+       "name": "D. Johnson",
+       "number": 4,
+       "position": "D",
+       "grid": null
+      },
+      {
+       "id": 6704,
+       "name": "P. Ito",
+       "number": 5,
+       "position": "D",
+       "grid": null
+      },
+      {
+       "id": 6705,
+       "name": "J. Benali",
+       "number": 6,
+       "position": "M",
+       "grid": null
+      },
+      {
+       "id": 6706,
+       "name": "H. Rahman",
+       "number": 7,
+       "position": "M",
+       "grid": null
+      },
+      {
+       "id": 6707,
+       "name": "M. Haddad",
+       "number": 8,
+       "position": "M",
+       "grid": null
+      },
+      {
+       "id": 6708,
+       "name": "X. Okafor",
+       "number": 9,
+       "position": "F",
+       "grid": null
+      },
+      {
+       "id": 6709,
+       "name": "S. Müller",
+       "number": 10,
+       "position": "F",
+       "grid": null
+      },
+      {
+       "id": 6710,
+       "name": "A. Walker",
+       "number": 11,
+       "position": "F",
+       "grid": null
+      }
+     ],
+     "substitutes": [
+      {
+       "id": 6711,
+       "name": "M. Novak",
+       "number": 12,
+       "position": "G",
+       "grid": null
+      },
+      {
+       "id": 6712,
+       "name": "U. Silva",
+       "number": 13,
+       "position": "D",
+       "grid": null
+      },
+      {
+       "id": 6713,
+       "name": "Q. Ziyech",
+       "number": 14,
+       "position": "D",
+       "grid": null
+      },
+      {
+       "id": 6714,
+       "name": "X. Dubois",
+       "number": 15,
+       "position": "M",
+       "grid": null
+      },
+      {
+       "id": 6715,
+       "name": "W. Larsen",
+       "number": 16,
+       "position": "M",
+       "grid": null
+      },
+      {
+       "id": 6716,
+       "name": "F. Martin",
+       "number": 17,
+       "position": "F",
+       "grid": null
+      },
+      {
+       "id": 6717,
+       "name": "E. Fernandes",
+       "number": 18,
+       "position": "F",
+       "grid": null
+      }
+     ]
+    }
+   ],
+   "stats": {
+    "home": {
+     "possession": 40,
+     "shots": 4,
+     "shots_on_target": 2,
+     "corners": 4,
+     "fouls": null,
+     "yellow_cards": null,
+     "red_cards": null
+    },
+    "away": {
+     "possession": 60,
+     "shots": 6,
+     "shots_on_target": 0,
+     "corners": 2,
+     "fouls": null,
+     "yellow_cards": null,
+     "red_cards": null
+    }
+   },
+   "has_event_data": true
+  },
+  "updated_at": "2026-10-28T18:00:00+00:00",
+  "stale": false
+ },
+ "2026102803": {
+  "data": {
+   "id": 2026102803,
+   "competition": {
+    "id": 2021,
+    "name": "Premier League",
+    "code": "PL",
+    "country": "England",
+    "emblem_url": "https://crests.football-data.org/PL.png"
+   },
+   "utc_kickoff": "2026-10-28T18:14:00Z",
+   "status": "scheduled",
+   "minute": null,
+   "injury_time": null,
+   "home": {
+    "id": 66,
+    "name": "Manchester United FC",
+    "short_name": "Man United",
+    "tla": "MUN",
+    "crest_url": "https://crests.football-data.org/66.png",
+    "country": "England"
+   },
+   "away": {
+    "id": 57,
+    "name": "Arsenal FC",
+    "short_name": "Arsenal",
+    "tla": "ARS",
+    "crest_url": "https://crests.football-data.org/57.png",
+    "country": "England"
+   },
+   "score": {
+    "home": null,
+    "away": null,
+    "ht_home": null,
+    "ht_away": null,
+    "pen_home": null,
+    "pen_away": null,
+    "duration": "regular"
+   },
+   "venue": "Man United Stadium",
+   "events": [],
+   "lineups": [
+    {
+     "team_id": 66,
+     "formation": "4-3-3",
+     "coach": "Coach MUN",
+     "starting": [
+      {
+       "id": 6600,
+       "name": "W. Kane",
+       "number": 1,
+       "position": "G",
+       "grid": null
+      },
+      {
+       "id": 6601,
+       "name": "L. Okafor",
+       "number": 2,
+       "position": "D",
+       "grid": null
+      },
+      {
+       "id": 6602,
+       "name": "X. Garcia",
+       "number": 3,
+       "position": "D",
+       "grid": null
+      },
+      {
+       "id": 6603,
+       "name": "F. Haddad",
+       "number": 4,
+       "position": "D",
+       "grid": null
+      },
+      {
+       "id": 6604,
+       "name": "N. Johnson",
+       "number": 5,
+       "position": "D",
+       "grid": null
+      },
+      {
+       "id": 6605,
+       "name": "X. Walker",
+       "number": 6,
+       "position": "M",
+       "grid": null
+      },
+      {
+       "id": 6606,
+       "name": "W. Benali",
+       "number": 7,
+       "position": "M",
+       "grid": null
+      },
+      {
+       "id": 6607,
+       "name": "O. Ito",
+       "number": 8,
+       "position": "M",
+       "grid": null
+      },
+      {
+       "id": 6608,
+       "name": "U. Dubois",
+       "number": 9,
+       "position": "F",
+       "grid": null
+      },
+      {
+       "id": 6609,
+       "name": "Q. Larsen",
+       "number": 10,
+       "position": "F",
+       "grid": null
+      },
+      {
+       "id": 6610,
+       "name": "A. Martin",
+       "number": 11,
+       "position": "F",
+       "grid": null
+      }
+     ],
+     "substitutes": [
+      {
+       "id": 6611,
+       "name": "Q. Costa",
+       "number": 12,
+       "position": "G",
+       "grid": null
+      },
+      {
+       "id": 6612,
+       "name": "D. Ziyech",
+       "number": 13,
+       "position": "D",
+       "grid": null
+      },
+      {
+       "id": 6613,
+       "name": "M. Novak",
+       "number": 14,
+       "position": "D",
+       "grid": null
+      },
+      {
+       "id": 6614,
+       "name": "E. Mendy",
+       "number": 15,
+       "position": "M",
+       "grid": null
+      },
+      {
+       "id": 6615,
+       "name": "L. Rossi",
+       "number": 16,
+       "position": "M",
+       "grid": null
+      },
+      {
+       "id": 6616,
+       "name": "A. Saka",
+       "number": 17,
+       "position": "F",
+       "grid": null
+      },
+      {
+       "id": 6617,
+       "name": "A. Silva",
+       "number": 18,
+       "position": "F",
+       "grid": null
+      }
+     ]
+    },
+    {
+     "team_id": 57,
+     "formation": "4-3-3",
+     "coach": "Coach ARS",
+     "starting": [
+      {
+       "id": 5700,
+       "name": "U. Martin",
+       "number": 1,
+       "position": "G",
+       "grid": null
+      },
+      {
+       "id": 5701,
+       "name": "X. Fernandes",
+       "number": 2,
+       "position": "D",
+       "grid": null
+      },
+      {
+       "id": 5702,
+       "name": "S. Costa",
+       "number": 3,
+       "position": "D",
+       "grid": null
+      },
+      {
+       "id": 5703,
+       "name": "V. Silva",
+       "number": 4,
+       "position": "D",
+       "grid": null
+      },
+      {
+       "id": 5704,
+       "name": "P. Haddad",
+       "number": 5,
+       "position": "D",
+       "grid": null
+      },
+      {
+       "id": 5705,
+       "name": "R. Mendy",
+       "number": 6,
+       "position": "M",
+       "grid": null
+      },
+      {
+       "id": 5706,
+       "name": "I. Novak",
+       "number": 7,
+       "position": "M",
+       "grid": null
+      },
+      {
+       "id": 5707,
+       "name": "U. Rahman",
+       "number": 8,
+       "position": "M",
+       "grid": null
+      },
+      {
+       "id": 5708,
+       "name": "T. Müller",
+       "number": 9,
+       "position": "F",
+       "grid": null
+      },
+      {
+       "id": 5709,
+       "name": "E. Rossi",
+       "number": 10,
+       "position": "F",
+       "grid": null
+      },
+      {
+       "id": 5710,
+       "name": "S. Larsen",
+       "number": 11,
+       "position": "F",
+       "grid": null
+      }
+     ],
+     "substitutes": [
+      {
+       "id": 5711,
+       "name": "E. Dubois",
+       "number": 12,
+       "position": "G",
+       "grid": null
+      },
+      {
+       "id": 5712,
+       "name": "E. Ito",
+       "number": 13,
+       "position": "D",
+       "grid": null
+      },
+      {
+       "id": 5713,
+       "name": "M. Kane",
+       "number": 14,
+       "position": "D",
+       "grid": null
+      },
+      {
+       "id": 5714,
+       "name": "R. Saka",
+       "number": 15,
+       "position": "M",
+       "grid": null
+      },
+      {
+       "id": 5715,
+       "name": "E. Diaz",
+       "number": 16,
+       "position": "M",
+       "grid": null
+      },
+      {
+       "id": 5716,
+       "name": "S. Walker",
+       "number": 17,
+       "position": "F",
+       "grid": null
+      },
+      {
+       "id": 5717,
+       "name": "N. Okafor",
+       "number": 18,
+       "position": "F",
+       "grid": null
+      }
+     ]
+    }
+   ],
+   "stats": null,
+   "has_event_data": true
+  },
+  "updated_at": "2026-10-28T18:00:00+00:00",
+  "stale": false
+ },
+ "2026102806": {
+  "data": {
+   "id": 2026102806,
+   "competition": {
+    "id": 2014,
+    "name": "Primera Division",
+    "code": "PD",
+    "country": "Spain",
+    "emblem_url": "https://crests.football-data.org/PD.png"
+   },
+   "utc_kickoff": "2026-10-28T14:40:00Z",
+   "status": "finished",
+   "minute": null,
+   "injury_time": null,
+   "home": {
+    "id": 78,
+    "name": "Club Atlético de Madrid",
+    "short_name": "Atleti",
+    "tla": "ATM",
+    "crest_url": "https://crests.football-data.org/78.png",
+    "country": "Spain"
+   },
+   "away": {
+    "id": 81,
+    "name": "FC Barcelona",
+    "short_name": "Barça",
+    "tla": "FCB",
+    "crest_url": "https://crests.football-data.org/81.png",
+    "country": "Spain"
+   },
+   "score": {
+    "home": 4,
+    "away": 0,
+    "ht_home": 3,
+    "ht_away": 0,
+    "pen_home": null,
+    "pen_away": null,
+    "duration": "regular"
+   },
+   "venue": "Atleti Stadium",
+   "events": [
+    {
+     "type": "goal",
+     "minute": 12,
+     "extra_minute": null,
+     "team_id": 78,
+     "player_id": 7809,
+     "player_name": "Y. Ziyech",
+     "related_player_id": 7810,
+     "related_player_name": "L. Rahman",
+     "detail": null
+    },
+    {
+     "type": "penalty_goal",
+     "minute": 33,
+     "extra_minute": null,
+     "team_id": 78,
+     "player_id": 7806,
+     "player_name": "F. Müller",
+     "related_player_id": null,
+     "related_player_name": null,
+     "detail": null
+    },
+    {
+     "type": "goal",
+     "minute": 36,
+     "extra_minute": null,
+     "team_id": 78,
+     "player_id": 7808,
+     "player_name": "Y. Novak",
+     "related_player_id": 7810,
+     "related_player_name": "L. Rahman",
+     "detail": null
+    },
+    {
+     "type": "yellow_card",
+     "minute": 52,
+     "extra_minute": null,
+     "team_id": 78,
+     "player_id": 7801,
+     "player_name": "N. Diaz",
+     "related_player_id": null,
+     "related_player_name": null,
+     "detail": null
+    },
+    {
+     "type": "substitution",
+     "minute": 60,
+     "extra_minute": null,
+     "team_id": 78,
+     "player_id": 7808,
+     "player_name": "Y. Novak",
+     "related_player_id": 7815,
+     "related_player_name": "D. Costa",
+     "detail": null
+    },
+    {
+     "type": "substitution",
+     "minute": 62,
+     "extra_minute": null,
+     "team_id": 78,
+     "player_id": 7809,
+     "player_name": "Y. Ziyech",
+     "related_player_id": 7816,
+     "related_player_name": "G. Mendy",
+     "detail": null
+    },
+    {
+     "type": "substitution",
+     "minute": 62,
+     "extra_minute": null,
+     "team_id": 81,
+     "player_id": 8108,
+     "player_name": "Y. Silva",
+     "related_player_id": 8115,
+     "related_player_name": "K. Fernandes",
+     "detail": null
+    },
+    {
+     "type": "substitution",
+     "minute": 63,
+     "extra_minute": null,
+     "team_id": 81,
+     "player_id": 8109,
+     "player_name": "J. Kane",
+     "related_player_id": 8116,
+     "related_player_name": "F. Ito",
+     "detail": null
+    },
+    {
+     "type": "substitution",
+     "minute": 80,
+     "extra_minute": null,
+     "team_id": 81,
+     "player_id": 8110,
+     "player_name": "S. Ziyech",
+     "related_player_id": 8117,
+     "related_player_name": "M. Rossi",
+     "detail": null
+    },
+    {
+     "type": "substitution",
+     "minute": 85,
+     "extra_minute": null,
+     "team_id": 78,
+     "player_id": 7810,
+     "player_name": "L. Rahman",
+     "related_player_id": 7817,
+     "related_player_name": "E. Saka",
+     "detail": null
+    },
+    {
+     "type": "penalty_goal",
+     "minute": 87,
+     "extra_minute": null,
+     "team_id": 78,
+     "player_id": 7809,
+     "player_name": "Y. Ziyech",
+     "related_player_id": null,
+     "related_player_name": null,
+     "detail": null
+    }
+   ],
+   "lineups": [
+    {
+     "team_id": 78,
+     "formation": "4-3-3",
+     "coach": "Coach ATM",
+     "starting": [
+      {
+       "id": 7800,
+       "name": "L. Rossi",
+       "number": 1,
+       "position": "G",
+       "grid": null
+      },
+      {
+       "id": 7801,
+       "name": "N. Diaz",
+       "number": 2,
+       "position": "D",
+       "grid": null
+      },
+      {
+       "id": 7802,
+       "name": "K. Okafor",
+       "number": 3,
+       "position": "D",
+       "grid": null
+      },
+      {
+       "id": 7803,
+       "name": "U. Benali",
+       "number": 4,
+       "position": "D",
+       "grid": null
+      },
+      {
+       "id": 7804,
+       "name": "N. Garcia",
+       "number": 5,
+       "position": "D",
+       "grid": null
+      },
+      {
+       "id": 7805,
+       "name": "W. Martin",
+       "number": 6,
+       "position": "M",
+       "grid": null
+      },
+      {
+       "id": 7806,
+       "name": "F. Müller",
+       "number": 7,
+       "position": "M",
+       "grid": null
+      },
+      {
+       "id": 7807,
+       "name": "F. Johnson",
+       "number": 8,
+       "position": "M",
+       "grid": null
+      },
+      {
+       "id": 7808,
+       "name": "Y. Novak",
+       "number": 9,
+       "position": "F",
+       "grid": null
+      },
+      {
+       "id": 7809,
+       "name": "Y. Ziyech",
+       "number": 10,
+       "position": "F",
+       "grid": null
+      },
+      {
+       "id": 7810,
+       "name": "L. Rahman",
+       "number": 11,
+       "position": "F",
+       "grid": null
+      }
+     ],
+     "substitutes": [
+      {
+       "id": 7811,
+       "name": "L. Walker",
+       "number": 12,
+       "position": "G",
+       "grid": null
+      },
+      {
+       "id": 7812,
+       "name": "B. Haddad",
+       "number": 13,
+       "position": "D",
+       "grid": null
+      },
+      {
+       "id": 7813,
+       "name": "G. Dubois",
+       "number": 14,
+       "position": "D",
+       "grid": null
+      },
+      {
+       "id": 7814,
+       "name": "Y. Silva",
+       "number": 15,
+       "position": "M",
+       "grid": null
+      },
+      {
+       "id": 7815,
+       "name": "D. Costa",
+       "number": 16,
+       "position": "M",
+       "grid": null
+      },
+      {
+       "id": 7816,
+       "name": "G. Mendy",
+       "number": 17,
+       "position": "F",
+       "grid": null
+      },
+      {
+       "id": 7817,
+       "name": "E. Saka",
+       "number": 18,
+       "position": "F",
+       "grid": null
+      }
+     ]
+    },
+    {
+     "team_id": 81,
+     "formation": "4-3-3",
+     "coach": "Coach FCB",
+     "starting": [
+      {
+       "id": 8100,
+       "name": "H. Mendy",
+       "number": 1,
+       "position": "G",
+       "grid": null
+      },
+      {
+       "id": 8101,
+       "name": "J. Johnson",
+       "number": 2,
+       "position": "D",
+       "grid": null
+      },
+      {
+       "id": 8102,
+       "name": "V. Novak",
+       "number": 3,
+       "position": "D",
+       "grid": null
+      },
+      {
+       "id": 8103,
+       "name": "E. Rahman",
+       "number": 4,
+       "position": "D",
+       "grid": null
+      },
+      {
+       "id": 8104,
+       "name": "T. Costa",
+       "number": 5,
+       "position": "D",
+       "grid": null
+      },
+      {
+       "id": 8105,
+       "name": "C. Dubois",
+       "number": 6,
+       "position": "M",
+       "grid": null
+      },
+      {
+       "id": 8106,
+       "name": "G. Larsen",
+       "number": 7,
+       "position": "M",
+       "grid": null
+      },
+      {
+       "id": 8107,
+       "name": "Q. Garcia",
+       "number": 8,
+       "position": "M",
+       "grid": null
+      },
+      {
+       "id": 8108,
+       "name": "Y. Silva",
+       "number": 9,
+       "position": "F",
+       "grid": null
+      },
+      {
+       "id": 8109,
+       "name": "J. Kane",
+       "number": 10,
+       "position": "F",
+       "grid": null
+      },
+      {
+       "id": 8110,
+       "name": "S. Ziyech",
+       "number": 11,
+       "position": "F",
+       "grid": null
+      }
+     ],
+     "substitutes": [
+      {
+       "id": 8111,
+       "name": "R. Haddad",
+       "number": 12,
+       "position": "G",
+       "grid": null
+      },
+      {
+       "id": 8112,
+       "name": "F. Okafor",
+       "number": 13,
+       "position": "D",
+       "grid": null
+      },
+      {
+       "id": 8113,
+       "name": "Y. Walker",
+       "number": 14,
+       "position": "D",
+       "grid": null
+      },
+      {
+       "id": 8114,
+       "name": "W. Saka",
+       "number": 15,
+       "position": "M",
+       "grid": null
+      },
+      {
+       "id": 8115,
+       "name": "K. Fernandes",
+       "number": 16,
+       "position": "M",
+       "grid": null
+      },
+      {
+       "id": 8116,
+       "name": "F. Ito",
+       "number": 17,
+       "position": "F",
+       "grid": null
+      },
+      {
+       "id": 8117,
+       "name": "M. Rossi",
+       "number": 18,
+       "position": "F",
+       "grid": null
+      }
+     ]
+    }
+   ],
+   "stats": {
+    "home": {
+     "possession": 55,
+     "shots": 8,
+     "shots_on_target": 4,
+     "corners": 6,
+     "fouls": null,
+     "yellow_cards": null,
+     "red_cards": null
+    },
+    "away": {
+     "possession": 45,
+     "shots": 7,
+     "shots_on_target": 4,
+     "corners": 8,
+     "fouls": null,
+     "yellow_cards": null,
+     "red_cards": null
+    }
+   },
+   "has_event_data": true
+  },
+  "updated_at": "2026-10-28T18:00:00+00:00",
+  "stale": false
+ }
+}

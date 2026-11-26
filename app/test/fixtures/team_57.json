@@ -1,0 +1,1085 @@
+{
+ "data": {
+  "team": {
+   "id": 57,
+   "name": "Arsenal FC",
+   "short_name": "Arsenal",
+   "tla": "ARS",
+   "crest_url": "https://crests.football-data.org/57.png",
+   "country": "England"
+  },
+  "recent": [
+   {
+    "id": 2026102303,
+    "competition": {
+     "id": 2021,
+     "name": "Premier League",
+     "code": "PL",
+     "country": "England",
+     "emblem_url": "https://crests.football-data.org/PL.png"
+    },
+    "utc_kickoff": "2026-10-23T19:30:00Z",
+    "status": "finished",
+    "minute": null,
+    "injury_time": null,
+    "home": {
+     "id": 61,
+     "name": "Chelsea FC",
+     "short_name": "Chelsea",
+     "tla": "CHE",
+     "crest_url": "https://crests.football-data.org/61.png",
+     "country": "England"
+    },
+    "away": {
+     "id": 57,
+     "name": "Arsenal FC",
+     "short_name": "Arsenal",
+     "tla": "ARS",
+     "crest_url": "https://crests.football-data.org/57.png",
+     "country": "England"
+    },
+    "score": {
+     "home": 0,
+     "away": 2,
+     "ht_home": 0,
+     "ht_away": 1,
+     "pen_home": null,
+     "pen_away": null,
+     "duration": "regular"
+    },
+    "venue": "Chelsea Stadium",
+    "events": [
+     {
+      "type": "red_card",
+      "minute": 18,
+      "extra_minute": null,
+      "team_id": 57,
+      "player_id": 5709,
+      "player_name": "E. Rossi",
+      "related_player_id": null,
+      "related_player_name": null,
+      "detail": null
+     },
+     {
+      "type": "goal",
+      "minute": 44,
+      "extra_minute": null,
+      "team_id": 57,
+      "player_id": 5709,
+      "player_name": "E. Rossi",
+      "related_player_id": 5708,
+      "related_player_name": "T. Müller",
+      "detail": null
+     },
+     {
+      "type": "substitution",
+      "minute": 55,
+      "extra_minute": null,
+      "team_id": 61,
+      "player_id": 6109,
+      "player_name": "A. Silva",
+      "related_player_id": 6116,
+      "related_player_name": "J. Kane",
+      "detail": null
+     },
+     {
+      "type": "substitution",
+      "minute": 61,
+      "extra_minute": null,
+      "team_id": 61,
+      "player_id": 6108,
+      "player_name": "K. Fernandes",
+      "related_player_id": 6115,
+      "related_player_name": "M. Diaz",
+      "detail": null
+     },
+     {
+      "type": "substitution",
+      "minute": 66,
+      "extra_minute": null,
+      "team_id": 61,
+      "player_id": 6110,
+      "player_name": "N. Haddad",
+      "related_player_id": 6117,
+      "related_player_name": "J. Benali",
+      "detail": null
+     },
+     {
+      "type": "substitution",
+      "minute": 66,
+      "extra_minute": null,
+      "team_id": 57,
+      "player_id": 5708,
+      "player_name": "T. Müller",
+      "related_player_id": 5715,
+      "related_player_name": "E. Diaz",
+      "detail": null
+     },
+     {
+      "type": "substitution",
+      "minute": 66,
+      "extra_minute": null,
+      "team_id": 57,
+      "player_id": 5710,
+      "player_name": "S. Larsen",
+      "related_player_id": 5717,
+      "related_player_name": "N. Okafor",
+      "detail": null
+     },
+     {
+      "type": "yellow_card",
+      "minute": 70,
+      "extra_minute": null,
+      "team_id": 61,
+      "player_id": 6108,
+      "player_name": "K. Fernandes",
+      "related_player_id": null,
+      "related_player_name": null,
+      "detail": null
+     },
+     {
+      "type": "red_card",
+      "minute": 75,
+      "extra_minute": null,
+      "team_id": 57,
+      "player_id": 5704,
+      "player_name": "P. Haddad",
+      "related_player_id": null,
+      "related_player_name": null,
+      "detail": null
+     },
+     {
+      "type": "own_goal",
+      "minute": 76,
+      "extra_minute": null,
+      "team_id": 61,
+      "player_id": 6109,
+      "player_name": "A. Silva",
+      "related_player_id": null,
+      "related_player_name": null,
+      "detail": null
+     },
+     {
+      "type": "substitution",
+      "minute": 76,
+      "extra_minute": null,
+      "team_id": 57,
+      "player_id": 5709,
+      "player_name": "E. Rossi",
+      "related_player_id": 5716,
+      "related_player_name": "S. Walker",
+      "detail": null
+     },
+     {
+      "type": "red_card",
+      "minute": 86,
+      "extra_minute": null,
+      "team_id": 61,
+      "player_id": 6106,
+      "player_name": "U. Ito",
+      "related_player_id": null,
+      "related_player_name": null,
+      "detail": null
+     }
+    ],
+    "lineups": [],
+    "stats": null,
+    "has_event_data": true
+   },
+   {
+    "id": 2026102403,
+    "competition": {
+     "id": 2021,
+     "name": "Premier League",
+     "code": "PL",
+     "country": "England",
+     "emblem_url": "https://crests.football-data.org/PL.png"
+    },
+    "utc_kickoff": "2026-10-24T19:30:00Z",
+    "status": "finished",
+    "minute": null,
+    "injury_time": null,
+    "home": {
+     "id": 67,
+     "name": "Newcastle United FC",
+     "short_name": "Newcastle",
+     "tla": "NEW",
+     "crest_url": "https://crests.football-data.org/67.png",
+     "country": "England"
+    },
+    "away": {
+     "id": 57,
+     "name": "Arsenal FC",
+     "short_name": "Arsenal",
+     "tla": "ARS",
+     "crest_url": "https://crests.football-data.org/57.png",
+     "country": "England"
+    },
+    "score": {
+     "home": 2,
+     "away": 0,
+     "ht_home": 1,
+     "ht_away": 0,
+     "pen_home": null,
+     "pen_away": null,
+     "duration": "regular"
+    },
+    "venue": "Newcastle Stadium",
+    "events": [
+     {
+      "type": "yellow_card",
+      "minute": 13,
+      "extra_minute": null,
+      "team_id": 67,
+      "player_id": 6710,
+      "player_name": "A. Walker",
+      "related_player_id": null,
+      "related_player_name": null,
+      "detail": null
+     },
+     {
+      "type": "penalty_goal",
+      "minute": 32,
+      "extra_minute": null,
+      "team_id": 67,
+      "player_id": 6708,
+      "player_name": "X. Okafor",
+      "related_player_id": null,
+      "related_player_name": null,
+      "detail": null
+     },
+     {
+      "type": "substitution",
+      "minute": 58,
+      "extra_minute": null,
+      "team_id": 67,
+      "player_id": 6709,
+      "player_name": "S. Müller",
+      "related_player_id": 6716,
+      "related_player_name": "F. Martin",
+      "detail": null
+     },
+     {
+      "type": "substitution",
+      "minute": 58,
+      "extra_minute": null,
+      "team_id": 67,
+      "player_id": 6710,
+      "player_name": "A. Walker",
+      "related_player_id": 6717,
+      "related_player_name": "E. Fernandes",
+      "detail": null
+     },
+     {
+      "type": "red_card",
+      "minute": 62,
+      "extra_minute": null,
+      "team_id": 57,
+      "player_id": 5701,
+      "player_name": "X. Fernandes",
+      "related_player_id": null,
+      "related_player_name": null,
+      "detail": null
+     },
+     {
+      "type": "substitution",
+      "minute": 71,
+      "extra_minute": null,
+      "team_id": 57,
+      "player_id": 5709,
+      "player_name": "E. Rossi",
+      "related_player_id": 5716,
+      "related_player_name": "S. Walker",
+      "detail": null
+     },
+     {
+      "type": "substitution",
+      "minute": 73,
+      "extra_minute": null,
+      "team_id": 57,
+      "player_id": 5710,
+      "player_name": "S. Larsen",
+      "related_player_id": 5717,
+      "related_player_name": "N. Okafor",
+      "detail": null
+     },
+     {
+      "type": "own_goal",
+      "minute": 78,
+      "extra_minute": null,
+      "team_id": 57,
+      "player_id": 5708,
+      "player_name": "T. Müller",
+      "related_player_id": null,
+      "related_player_name": null,
+      "detail": null
+     },
+     {
+      "type": "yellow_card",
+      "minute": 80,
+      "extra_minute": null,
+      "team_id": 57,
+      "player_id": 5704,
+      "player_name": "P. Haddad",
+      "related_player_id": null,
+      "related_player_name": null,
+      "detail": null
+     },
+     {
+      "type": "substitution",
+      "minute": 81,
+      "extra_minute": null,
+      "team_id": 67,
+      "player_id": 6708,
+      "player_name": "X. Okafor",
+      "related_player_id": 6715,
+      "related_player_name": "W. Larsen",
+      "detail": null
+     },
+     {
+      "type": "substitution",
+      "minute": 85,
+      "extra_minute": null,
+      "team_id": 57,
+      "player_id": 5708,
+      "player_name": "T. Müller",
+      "related_player_id": 5715,
+      "related_player_name": "E. Diaz",
+      "detail": null
+     },
+     {
+      "type": "yellow_card",
+      "minute": 90,
+      "extra_minute": null,
+      "team_id": 67,
+      "player_id": 6704,
+      "player_name": "P. Ito",
+      "related_player_id": null,
+      "related_player_name": null,
+      "detail": null
+     }
+    ],
+    "lineups": [],
+    "stats": null,
+    "has_event_data": true
+   },
+   {
+    "id": 2026102501,
+    "competition": {
+     "id": 2021,
+     "name": "Premier League",
+     "code": "PL",
+     "country": "England",
+     "emblem_url": "https://crests.football-data.org/PL.png"
+    },
+    "utc_kickoff": "2026-10-25T14:30:00Z",
+    "status": "finished",
+    "minute": null,
+    "injury_time": null,
+    "home": {
+     "id": 57,
+     "name": "Arsenal FC",
+     "short_name": "Arsenal",
+     "tla": "ARS",
+     "crest_url": "https://crests.football-data.org/57.png",
+     "country": "England"
+    },
+    "away": {
+     "id": 61,
+     "name": "Chelsea FC",
+     "short_name": "Chelsea",
+     "tla": "CHE",
+     "crest_url": "https://crests.football-data.org/61.png",
+     "country": "England"
+    },
+    "score": {
+     "home": 0,
+     "away": 1,
+     "ht_home": 0,
+     "ht_away": 0,
+     "pen_home": null,
+     "pen_away": null,
+     "duration": "regular"
+    },
+    "venue": "Arsenal Stadium",
+    "events": [
+     {
+      "type": "yellow_card",
+      "minute": 42,
+      "extra_minute": null,
+      "team_id": 61,
+      "player_id": 6108,
+      "player_name": "K. Fernandes",
+      "related_player_id": null,
+      "related_player_name": null,
+      "detail": null
+     },
+     {
+      "type": "yellow_card",
+      "minute": 46,
+      "extra_minute": null,
+      "team_id": 61,
+      "player_id": 6102,
+      "player_name": "A. Rahman",
+      "related_player_id": null,
+      "related_player_name": null,
+      "detail": null
+     },
+     {
+      "type": "substitution",
+      "minute": 55,
+      "extra_minute": null,
+      "team_id": 57,
+      "player_id": 5709,
+      "player_name": "E. Rossi",
+      "related_player_id": 5716,
+      "related_player_name": "S. Walker",
+      "detail": null
+     },
+     {
+      "type": "substitution",
+      "minute": 56,
+      "extra_minute": null,
+      "team_id": 61,
+      "player_id": 6109,
+      "player_name": "A. Silva",
+      "related_player_id": 6116,
+      "related_player_name": "J. Kane",
+      "detail": null
+     },
+     {
+      "type": "substitution",
+      "minute": 66,
+      "extra_minute": null,
+      "team_id": 57,
+      "player_id": 5710,
+      "player_name": "S. Larsen",
+      "related_player_id": 5717,
+      "related_player_name": "N. Okafor",
+      "detail": null
+     },
+     {
+      "type": "yellow_card",
+      "minute": 68,
+      "extra_minute": null,
+      "team_id": 57,
+      "player_id": 5710,
+      "player_name": "S. Larsen",
+      "related_player_id": null,
+      "related_player_name": null,
+      "detail": null
+     },
+     {
+      "type": "yellow_card",
+      "minute": 71,
+      "extra_minute": null,
+      "team_id": 57,
+      "player_id": 5707,
+      "player_name": "U. Rahman",
+      "related_player_id": null,
+      "related_player_name": null,
+      "detail": null
+     },
+     {
+      "type": "substitution",
+      "minute": 71,
+      "extra_minute": null,
+      "team_id": 57,
+      "player_id": 5708,
+      "player_name": "T. Müller",
+      "related_player_id": 5715,
+      "related_player_name": "E. Diaz",
+      "detail": null
+     },
+     {
+      "type": "substitution",
+      "minute": 77,
+      "extra_minute": null,
+      "team_id": 61,
+      "player_id": 6110,
+      "player_name": "N. Haddad",
+      "related_player_id": 6117,
+      "related_player_name": "J. Benali",
+      "detail": null
+     },
+     {
+      "type": "substitution",
+      "minute": 81,
+      "extra_minute": null,
+      "team_id": 61,
+      "player_id": 6108,
+      "player_name": "K. Fernandes",
+      "related_player_id": 6115,
+      "related_player_name": "M. Diaz",
+      "detail": null
+     },
+     {
+      "type": "goal",
+      "minute": 85,
+      "extra_minute": null,
+      "team_id": 61,
+      "player_id": 6110,
+      "player_name": "N. Haddad",
+      "related_player_id": 6105,
+      "related_player_name": "C. Okafor",
+      "detail": null
+     }
+    ],
+    "lineups": [],
+    "stats": null,
+    "has_event_data": true
+   },
+   {
+    "id": 2026102600,
+    "competition": {
+     "id": 2021,
+     "name": "Premier League",
+     "code": "PL",
+     "country": "England",
+     "emblem_url": "https://crests.football-data.org/PL.png"
+    },
+    "utc_kickoff": "2026-10-26T12:00:00Z",
+    "status": "finished",
+    "minute": null,
+    "injury_time": null,
+    "home": {
+     "id": 73,
+     "name": "Tottenham Hotspur FC",
+     "short_name": "Tottenham",
+     "tla": "TOT",
+     "crest_url": "https://crests.football-data.org/73.png",
+     "country": "England"
+    },
+    "away": {
+     "id": 57,
+     "name": "Arsenal FC",
+     "short_name": "Arsenal",
+     "tla": "ARS",
+     "crest_url": "https://crests.football-data.org/57.png",
+     "country": "England"
+    },
+    "score": {
+     "home": 1,
+     "away": 0,
+     "ht_home": 0,
+     "ht_away": 0,
+     "pen_home": null,
+     "pen_away": null,
+     "duration": "regular"
+    },
+    "venue": "Tottenham Stadium",
+    "events": [
+     {
+      "type": "yellow_card",
+      "minute": 7,
+      "extra_minute": null,
+      "team_id": 57,
+      "player_id": 5703,
+      "player_name": "V. Silva",
+      "related_player_id": null,
+      "related_player_name": null,
+      "detail": null
+     },
+     {
+      "type": "goal",
+      "minute": 54,
+      "extra_minute": null,
+      "team_id": 73,
+      "player_id": 7307,
+      "player_name": "P. Costa",
+      "related_player_id": 7310,
+      "related_player_name": "F. Rossi",
+      "detail": null
+     },
+     {
+      "type": "substitution",
+      "minute": 55,
+      "extra_minute": null,
+      "team_id": 73,
+      "player_id": 7310,
+      "player_name": "F. Rossi",
+      "related_player_id": 7317,
+      "related_player_name": "W. Kane",
+      "detail": null
+     },
+     {
+      "type": "substitution",
+      "minute": 56,
+      "extra_minute": null,
+      "team_id": 57,
+      "player_id": 5709,
+      "player_name": "E. Rossi",
+      "related_player_id": 5716,
+      "related_player_name": "S. Walker",
+      "detail": null
+     },
+     {
+      "type": "yellow_card",
+      "minute": 69,
+      "extra_minute": null,
+      "team_id": 73,
+      "player_id": 7306,
+      "player_name": "N. Okafor",
+      "related_player_id": null,
+      "related_player_name": null,
+      "detail": null
+     },
+     {
+      "type": "substitution",
+      "minute": 70,
+      "extra_minute": null,
+      "team_id": 73,
+      "player_id": 7308,
+      "player_name": "R. Martin",
+      "related_player_id": 7315,
+      "related_player_name": "G. Silva",
+      "detail": null
+     },
+     {
+      "type": "substitution",
+      "minute": 74,
+      "extra_minute": null,
+      "team_id": 57,
+      "player_id": 5710,
+      "player_name": "S. Larsen",
+      "related_player_id": 5717,
+      "related_player_name": "N. Okafor",
+      "detail": null
+     },
+     {
+      "type": "substitution",
+      "minute": 79,
+      "extra_minute": null,
+      "team_id": 73,
+      "player_id": 7309,
+      "player_name": "N. Haddad",
+      "related_player_id": 7316,
+      "related_player_name": "Z. Fernandes",
+      "detail": null
+     },
+     {
+      "type": "substitution",
+      "minute": 82,
+      "extra_minute": null,
+      "team_id": 57,
+      "player_id": 5708,
+      "player_name": "T. Müller",
+      "related_player_id": 5715,
+      "related_player_name": "E. Diaz",
+      "detail": null
+     }
+    ],
+    "lineups": [],
+    "stats": null,
+    "has_event_data": true
+   },
+   {
+    "id": 2026102700,
+    "competition": {
+     "id": 2021,
+     "name": "Premier League",
+     "code": "PL",
+     "country": "England",
+     "emblem_url": "https://crests.football-data.org/PL.png"
+    },
+    "utc_kickoff": "2026-10-27T12:00:00Z",
+    "status": "finished",
+    "minute": null,
+    "injury_time": null,
+    "home": {
+     "id": 57,
+     "name": "Arsenal FC",
+     "short_name": "Arsenal",
+     "tla": "ARS",
+     "crest_url": "https://crests.football-data.org/57.png",
+     "country": "England"
+    },
+    "away": {
+     "id": 58,
+     "name": "Aston Villa FC",
+     "short_name": "Aston Villa",
+     "tla": "AVL",
+     "crest_url": "https://crests.football-data.org/58.png",
+     "country": "England"
+    },
+    "score": {
+     "home": 1,
+     "away": 0,
+     "ht_home": 1,
+     "ht_away": 0,
+     "pen_home": null,
+     "pen_away": null,
+     "duration": "regular"
+    },
+    "venue": "Arsenal Stadium",
+    "events": [
+     {
+      "type": "yellow_card",
+      "minute": 9,
+      "extra_minute": null,
+      "team_id": 58,
+      "player_id": 5805,
+      "player_name": "C. Ziyech",
+      "related_player_id": null,
+      "related_player_name": null,
+      "detail": null
+     },
+     {
+      "type": "yellow_card",
+      "minute": 18,
+      "extra_minute": null,
+      "team_id": 58,
+      "player_id": 5802,
+      "player_name": "G. Walker",
+      "related_player_id": null,
+      "related_player_name": null,
+      "detail": null
+     },
+     {
+      "type": "penalty_goal",
+      "minute": 21,
+      "extra_minute": null,
+      "team_id": 57,
+      "player_id": 5709,
+      "player_name": "E. Rossi",
+      "related_player_id": null,
+      "related_player_name": null,
+      "detail": null
+     },
+     {
+      "type": "yellow_card",
+      "minute": 53,
+      "extra_minute": null,
+      "team_id": 57,
+      "player_id": 5710,
+      "player_name": "S. Larsen",
+      "related_player_id": null,
+      "related_player_name": null,
+      "detail": null
+     },
+     {
+      "type": "substitution",
+      "minute": 56,
+      "extra_minute": null,
+      "team_id": 58,
+      "player_id": 5809,
+      "player_name": "M. Müller",
+      "related_player_id": 5816,
+      "related_player_name": "Y. Novak",
+      "detail": null
+     },
+     {
+      "type": "substitution",
+      "minute": 60,
+      "extra_minute": null,
+      "team_id": 58,
+      "player_id": 5810,
+      "player_name": "V. Dubois",
+      "related_player_id": 5817,
+      "related_player_name": "E. Silva",
+      "detail": null
+     },
+     {
+      "type": "substitution",
+      "minute": 77,
+      "extra_minute": null,
+      "team_id": 57,
+      "player_id": 5710,
+      "player_name": "S. Larsen",
+      "related_player_id": 5717,
+      "related_player_name": "N. Okafor",
+      "detail": null
+     },
+     {
+      "type": "substitution",
+      "minute": 80,
+      "extra_minute": null,
+      "team_id": 57,
+      "player_id": 5708,
+      "player_name": "T. Müller",
+      "related_player_id": 5715,
+      "related_player_name": "E. Diaz",
+      "detail": null
+     },
+     {
+      "type": "substitution",
+      "minute": 81,
+      "extra_minute": null,
+      "team_id": 58,
+      "player_id": 5808,
+      "player_name": "V. Saka",
+      "related_player_id": 5815,
+      "related_player_name": "V. Benali",
+      "detail": null
+     },
+     {
+      "type": "substitution",
+      "minute": 83,
+      "extra_minute": null,
+      "team_id": 57,
+      "player_id": 5709,
+      "player_name": "E. Rossi",
+      "related_player_id": 5716,
+      "related_player_name": "S. Walker",
+      "detail": null
+     }
+    ],
+    "lineups": [],
+    "stats": null,
+    "has_event_data": true
+   }
+  ],
+  "upcoming": [
+   {
+    "id": 2026102803,
+    "competition": {
+     "id": 2021,
+     "name": "Premier League",
+     "code": "PL",
+     "country": "England",
+     "emblem_url": "https://crests.football-data.org/PL.png"
+    },
+    "utc_kickoff": "2026-10-28T18:14:00Z",
+    "status": "scheduled",
+    "minute": null,
+    "injury_time": null,
+    "home": {
+     "id": 66,
+     "name": "Manchester United FC",
+     "short_name": "Man United",
+     "tla": "MUN",
+     "crest_url": "https://crests.football-data.org/66.png",
+     "country": "England"
+    },
+    "away": {
+     "id": 57,
+     "name": "Arsenal FC",
+     "short_name": "Arsenal",
+     "tla": "ARS",
+     "crest_url": "https://crests.football-data.org/57.png",
+     "country": "England"
+    },
+    "score": {
+     "home": null,
+     "away": null,
+     "ht_home": null,
+     "ht_away": null,
+     "pen_home": null,
+     "pen_away": null,
+     "duration": "regular"
+    },
+    "venue": "Man United Stadium",
+    "events": [],
+    "lineups": [],
+    "stats": null,
+    "has_event_data": true
+   },
+   {
+    "id": 2026102900,
+    "competition": {
+     "id": 2021,
+     "name": "Premier League",
+     "code": "PL",
+     "country": "England",
+     "emblem_url": "https://crests.football-data.org/PL.png"
+    },
+    "utc_kickoff": "2026-10-29T12:00:00Z",
+    "status": "scheduled",
+    "minute": null,
+    "injury_time": null,
+    "home": {
+     "id": 73,
+     "name": "Tottenham Hotspur FC",
+     "short_name": "Tottenham",
+     "tla": "TOT",
+     "crest_url": "https://crests.football-data.org/73.png",
+     "country": "England"
+    },
+    "away": {
+     "id": 57,
+     "name": "Arsenal FC",
+     "short_name": "Arsenal",
+     "tla": "ARS",
+     "crest_url": "https://crests.football-data.org/57.png",
+     "country": "England"
+    },
+    "score": {
+     "home": null,
+     "away": null,
+     "ht_home": null,
+     "ht_away": null,
+     "pen_home": null,
+     "pen_away": null,
+     "duration": "regular"
+    },
+    "venue": "Tottenham Stadium",
+    "events": [],
+    "lineups": [],
+    "stats": null,
+    "has_event_data": true
+   },
+   {
+    "id": 2026103001,
+    "competition": {
+     "id": 2021,
+     "name": "Premier League",
+     "code": "PL",
+     "country": "England",
+     "emblem_url": "https://crests.football-data.org/PL.png"
+    },
+    "utc_kickoff": "2026-10-30T14:30:00Z",
+    "status": "scheduled",
+    "minute": null,
+    "injury_time": null,
+    "home": {
+     "id": 61,
+     "name": "Chelsea FC",
+     "short_name": "Chelsea",
+     "tla": "CHE",
+     "crest_url": "https://crests.football-data.org/61.png",
+     "country": "England"
+    },
+    "away": {
+     "id": 57,
+     "name": "Arsenal FC",
+     "short_name": "Arsenal",
+     "tla": "ARS",
+     "crest_url": "https://crests.football-data.org/57.png",
+     "country": "England"
+    },
+    "score": {
+     "home": null,
+     "away": null,
+     "ht_home": null,
+     "ht_away": null,
+     "pen_home": null,
+     "pen_away": null,
+     "duration": "regular"
+    },
+    "venue": "Chelsea Stadium",
+    "events": [],
+    "lineups": [],
+    "stats": null,
+    "has_event_data": true
+   },
+   {
+    "id": 2026103103,
+    "competition": {
+     "id": 2021,
+     "name": "Premier League",
+     "code": "PL",
+     "country": "England",
+     "emblem_url": "https://crests.football-data.org/PL.png"
+    },
+    "utc_kickoff": "2026-10-31T19:30:00Z",
+    "status": "scheduled",
+    "minute": null,
+    "injury_time": null,
+    "home": {
+     "id": 73,
+     "name": "Tottenham Hotspur FC",
+     "short_name": "Tottenham",
+     "tla": "TOT",
+     "crest_url": "https://crests.football-data.org/73.png",
+     "country": "England"
+    },
+    "away": {
+     "id": 57,
+     "name": "Arsenal FC",
+     "short_name": "Arsenal",
+     "tla": "ARS",
+     "crest_url": "https://crests.football-data.org/57.png",
+     "country": "England"
+    },
+    "score": {
+     "home": null,
+     "away": null,
+     "ht_home": null,
+     "ht_away": null,
+     "pen_home": null,
+     "pen_away": null,
+     "duration": "regular"
+    },
+    "venue": "Tottenham Stadium",
+    "events": [],
+    "lineups": [],
+    "stats": null,
+    "has_event_data": true
+   },
+   {
+    "id": 2026110101,
+    "competition": {
+     "id": 2021,
+     "name": "Premier League",
+     "code": "PL",
+     "country": "England",
+     "emblem_url": "https://crests.football-data.org/PL.png"
+    },
+    "utc_kickoff": "2026-11-01T14:30:00Z",
+    "status": "scheduled",
+    "minute": null,
+    "injury_time": null,
+    "home": {
+     "id": 57,
+     "name": "Arsenal FC",
+     "short_name": "Arsenal",
+     "tla": "ARS",
+     "crest_url": "https://crests.football-data.org/57.png",
+     "country": "England"
+    },
+    "away": {
+     "id": 73,
+     "name": "Tottenham Hotspur FC",
+     "short_name": "Tottenham",
+     "tla": "TOT",
+     "crest_url": "https://crests.football-data.org/73.png",
+     "country": "England"
+    },
+    "score": {
+     "home": null,
+     "away": null,
+     "ht_home": null,
+     "ht_away": null,
+     "pen_home": null,
+     "pen_away": null,
+     "duration": "regular"
+    },
+    "venue": "Arsenal Stadium",
+    "events": [],
+    "lineups": [],
+    "stats": null,
+    "has_event_data": true
+   }
+  ],
+  "standing": {
+   "position": 1,
+   "team": {
+    "id": 57,
+    "name": "Arsenal FC",
+    "short_name": "Arsenal",
+    "tla": "ARS",
+    "crest_url": "https://crests.football-data.org/57.png",
+    "country": "England"
+   },
+   "played": 12,
+   "won": 6,
+   "draw": 4,
+   "lost": 2,
+   "goals_for": 13,
+   "goals_against": 7,
+   "goal_difference": 6,
+   "points": 22,
+   "form": null,
+   "group": null,
+   "competition": {
+    "id": 2021,
+    "name": "Premier League",
+    "code": "PL",
+    "country": "England",
+    "emblem_url": "https://crests.football-data.org/PL.png"
+   }
+  }
+ },
+ "updated_at": "2026-10-28T18:00:00+00:00",
+ "stale": false
+}

@@ -1,0 +1,10 @@
+{
+  "API_BASE_URL": "https://api.your-domain.com",
+  "PRIVACY_POLICY_URL": "https://your-name.github.io/privacy-policy",
+  "ADMOB_BANNER_ANDROID": "ca-app-pub-0000000000000000/0000000000",
+  "ADMOB_NATIVE_ANDROID": "ca-app-pub-0000000000000000/0000000000",
+  "ADMOB_BANNER_IOS": "ca-app-pub-0000000000000000/0000000000",
+  "ADMOB_NATIVE_IOS": "ca-app-pub-0000000000000000/0000000000",
+  "SHOW_CRESTS": "true",
+  "ADS": "true"
+}

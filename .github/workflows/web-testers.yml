@@ -1,0 +1,61 @@
+# Builds the web version of BGoal and publishes it on GitHub Pages, so iPhone
+# testers can open a link and add it to their Home Screen (see WEB_TESTING.md).
+# Runs on every push to main, or by hand from the Actions tab.
+name: Web version for testers
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - name: Build
+        working-directory: app
+        env:
+          API_BASE_URL: ${{ vars.API_BASE_URL }}
+          REPO: ${{ github.event.repository.name }}
+        run: |
+          if [ -z "$API_BASE_URL" ]; then
+            echo "::error::Set the API_BASE_URL variable: repository Settings > Secrets and variables > Actions > Variables."
+            exit 1
+          fi
+          # A <user>.github.io repository is served at the site root, any other at /<repo>/.
+          case "$REPO" in *.github.io) BASE="/" ;; *) BASE="/$REPO/" ;; esac
+          # Adds only what's missing for the web; keeps web/index.html and the icons.
+          flutter create --platforms web --org com.bgoal --project-name livescores .
+          flutter pub get
+          flutter build web --release --base-href "$BASE" \
+            --dart-define=API_BASE_URL="$API_BASE_URL" --dart-define=ADS=false
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: app/build/web
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

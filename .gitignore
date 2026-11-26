@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+*.db
+
+# Secrets: never commit these
+.env
+backend/secrets/
+*.p8
+firebase-service-account*.json
+
+# Local tools
+.claude/
+.idea/
+.vscode/
