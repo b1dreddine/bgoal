@@ -35,6 +35,17 @@ async def live_matches() -> dict:
     return await cache.cached(LIVE_KEY, max(get_settings().live_poll_seconds, 10), fetch)
 
 
+async def _live_overlay() -> dict | None:
+    """Live scores to lay over cached matches: the worker's latest poll, or, with no worker
+    (serverless), a provider call cached for one poll interval."""
+    if get_settings().serverless:
+        try:
+            return await live_matches()
+        except Exception:
+            return None  # the cached match data is still shown
+    return await cache.get_entry(LIVE_KEY)
+
+
 async def matches_for_local_date(day: date, tz_name: str) -> dict:
     """Matches whose kickoff falls on `day` in the user's timezone.
 
@@ -55,7 +66,7 @@ async def matches_for_local_date(day: date, tz_name: str) -> dict:
         for m in entry["data"]:
             by_id[m["id"]] = m
 
-    live = await cache.get_entry(LIVE_KEY)
+    live = await _live_overlay()
     if live:
         for m in live["data"]:
             if m["id"] in by_id:
@@ -90,7 +101,7 @@ async def match_detail(match_id: int) -> dict:
     else:
         entry = {**entry, "stale": False}
 
-    live = await cache.get_entry(LIVE_KEY)
+    live = await _live_overlay()
     if live:
         for m in live["data"]:
             if m["id"] == match_id:
@@ -133,7 +144,7 @@ async def team_overview(session: AsyncSession, team_id: int) -> dict:
     )
     # Fixtures are cached for 10 minutes; overlay the worker's live data so an
     # in-play score is never older than one poll.
-    live = await cache.get_entry(LIVE_KEY)
+    live = await _live_overlay()
     live_by_id = {m["id"]: m for m in live["data"]} if live else {}
     fixtures = [Match.model_validate(_merge_live(m, live_by_id[m["id"]]) if m["id"] in live_by_id else m)
                 for m in fixtures_entry["data"]]
@@ -166,6 +177,13 @@ async def team_overview(session: AsyncSession, team_id: int) -> dict:
 async def browse_teams(session: AsyncSession) -> list[dict]:
     """Teams grouped by competition, domestic leagues first, for the app's team picker."""
     groups = await repository.competition_teams(session)
+    if not groups and get_settings().serverless:
+        # No worker syncs teams here: load them on first use, then they're in the database.
+        for comp, teams in await get_provider().list_competition_teams():
+            await repository.upsert_competitions(session, [comp])
+            await repository.upsert_teams(session, teams, comp.id)
+        await session.commit()
+        groups = await repository.competition_teams(session)
     groups.sort(key=lambda g: (g[0].code in INTERNATIONAL_CODES, g[0].name))
     return [{"competition": c.model_dump(), "teams": [t.model_dump() for t in teams]} for c, teams in groups]
 

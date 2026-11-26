@@ -10,8 +10,22 @@ Without an Apple Developer account you can't send an iPhone app. This sends a **
 
 ## What you need
 
-1. **The backend online, on HTTPS** (PUBLISHING.md, section 2; the free Oracle Cloud machine works). A website on `https://` can't talk to `http://`, and testers' phones can't reach `localhost`.
+1. **The backend online, on HTTPS.** A website on `https://` can't talk to `http://`, and testers' phones can't reach `localhost`. Free, with no card: **Vercel** (below).
 2. **A free GitHub account**, with this project in a **public** repository (GitHub Pages is free for public repositories; a private one needs a paid plan). Your code is then visible to anyone; the backend keys are not in it.
+
+## Free backend on Vercel (no card)
+
+The backend detects Vercel and switches to a mode made for it: no separate worker (the API fetches live scores itself, cached for 15 seconds), a small database in `/tmp`, and an in-memory cache. Nothing to configure. It never sleeps in a way testers notice: each request starts it in about a second, even after weeks without visitors. No push notifications in this mode.
+
+1. Go to [vercel.com/signup](https://vercel.com/signup), choose **Hobby**, and **Continue with GitHub**.
+2. **Add New → Project**, import **bgoal**.
+3. **Root Directory**: click **Edit** and choose `backend`. Leave everything else as it is.
+4. **Deploy**. The address is shown when it's done, for example `https://bgoal-xxxx.vercel.app`.
+5. Put that address in the GitHub variable `API_BASE_URL` (next section) and run the web workflow again.
+
+It starts with simulated matches (`PROVIDER=mock`). For real ones: Vercel project → **Settings → Environment Variables**: `PROVIDER` = `football_data` and `FOOTBALL_DATA_API_KEY` = your free key from football-data.org, then **Redeploy**. The first opening of the team picker then takes up to a minute, because the free key allows 10 requests a minute and the team list needs 12.
+
+Vercel's Hobby plan is for non-commercial use: fine for testing, but the store launch with ads needs a paid host (PUBLISHING.md, section 2).
 
 ## One-time setup (10 minutes, all in the browser)
 

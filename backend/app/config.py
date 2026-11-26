@@ -1,6 +1,7 @@
+import os
 from functools import lru_cache
 
-from pydantic import field_validator
+from pydantic import field_validator, model_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -39,6 +40,12 @@ class Settings(BaseSettings):
     # Only for one instance: two would each poll the provider and send every push twice.
     run_worker_in_api: bool = False
 
+    # Serverless hosting (Vercel's free plan): there is no worker, so the API fetches live
+    # scores itself and loads the team list the first time it's asked for. Turned on
+    # automatically on Vercel (which sets VERCEL=1), with a SQLite file in /tmp and an
+    # in-memory cache unless DATABASE_URL / REDIS_URL say otherwise. No pushes in this mode.
+    serverless: bool = bool(os.environ.get("VERCEL"))
+
     @field_validator("database_url")
     @classmethod
     def _async_driver(cls, v: str) -> str:
@@ -47,6 +54,15 @@ class Settings(BaseSettings):
             if v.startswith(prefix):
                 return "postgresql+asyncpg://" + v[len(prefix):]
         return v
+
+    @model_validator(mode="after")
+    def _serverless_defaults(self) -> "Settings":
+        if self.serverless:
+            if "database_url" not in self.model_fields_set:
+                self.database_url = "sqlite+aiosqlite:////tmp/bgoal.db"
+            if "redis_url" not in self.model_fields_set:
+                self.redis_url = "memory://"
+        return self
 
     @property
     def competitions_list(self) -> list[str]:
