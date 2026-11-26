@@ -62,6 +62,10 @@ class Settings(BaseSettings):
                 self.database_url = "sqlite+aiosqlite:////tmp/bgoal.db"
             if "redis_url" not in self.model_fields_set:
                 self.redis_url = "memory://"
+            if "football_data_competitions" not in self.model_fields_set:
+                # The biggest club competitions: each new serverless instance loads every
+                # league's team list, and the free key allows 10 requests a minute.
+                self.football_data_competitions = "PL,PD,SA,BL1,FL1,CL"
         return self
 
     @property

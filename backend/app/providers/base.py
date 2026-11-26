@@ -2,6 +2,7 @@ import asyncio
 import logging
 import time
 from abc import ABC, abstractmethod
+from collections import deque
 from datetime import date
 
 import httpx
@@ -16,23 +17,36 @@ class ProviderError(Exception):
 
 
 class RateLimiter:
-    """Spaces requests evenly so we never exceed `per_minute` calls to the provider."""
+    """At most `per_minute` calls in any rolling 60 seconds, like the providers count them.
 
-    def __init__(self, per_minute: int):
-        self.interval = 60.0 / max(per_minute, 1)
-        self._next = 0.0
+    Bursts go through at once (a list of leagues loads in a second instead of a minute);
+    after that, calls wait for the oldest one to leave the window.
+    """
+
+    def __init__(self, per_minute: int, window: float = 60.0):
+        self.limit = max(per_minute, 1)
+        self.window = window
+        self._calls: deque[float] = deque()
+        self._blocked_until = 0.0
         self._lock = asyncio.Lock()
 
     async def wait(self) -> None:
         async with self._lock:
-            now = time.monotonic()
-            delay = self._next - now
-            if delay > 0:
+            while True:
+                now = time.monotonic()
+                while self._calls and now - self._calls[0] >= self.window:
+                    self._calls.popleft()
+                delay = self._blocked_until - now
+                if len(self._calls) >= self.limit:
+                    delay = max(delay, self._calls[0] + self.window - now)
+                if delay <= 0:
+                    break
                 await asyncio.sleep(delay)
-            self._next = max(now, self._next) + self.interval
+            self._calls.append(time.monotonic())
 
     def penalize(self, seconds: float) -> None:
-        self._next = max(self._next, time.monotonic() + seconds)
+        """The provider said "too many requests": pause every call for `seconds`."""
+        self._blocked_until = max(self._blocked_until, time.monotonic() + seconds)
 
 
 class FootballProvider(ABC):

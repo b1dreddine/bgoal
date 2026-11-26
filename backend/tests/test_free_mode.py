@@ -21,6 +21,25 @@ async def test_memory_url_uses_an_in_process_cache(monkeypatch):
         get_settings.cache_clear()
 
 
+@pytest.mark.asyncio
+async def test_rate_limiter_lets_a_burst_through_then_respects_the_window():
+    from app.providers.base import RateLimiter
+
+    limiter = RateLimiter(per_minute=3, window=0.5)
+    loop = asyncio.get_running_loop()
+    start = loop.time()
+    for _ in range(3):
+        await limiter.wait()
+    assert loop.time() - start < 0.1  # the first 3 go at once
+    await limiter.wait()
+    assert loop.time() - start >= 0.45  # the 4th waits for the first to leave the window
+
+    limiter.penalize(0.2)
+    before = loop.time()
+    await limiter.wait()
+    assert loop.time() - before >= 0.15
+
+
 def test_on_vercel_defaults_to_sqlite_and_memory_cache(monkeypatch):
     monkeypatch.setenv("SERVERLESS", "true")
     monkeypatch.delenv("DATABASE_URL", raising=False)

@@ -23,7 +23,7 @@ The backend detects Vercel and switches to a mode made for it: no separate worke
 4. **Deploy**. The address is shown when it's done, for example `https://bgoal-xxxx.vercel.app`.
 5. Put that address in the GitHub variable `API_BASE_URL` (next section) and run the web workflow again.
 
-It starts with simulated matches (`PROVIDER=mock`). For real ones: Vercel project → **Settings → Environment Variables**: `PROVIDER` = `football_data` and `FOOTBALL_DATA_API_KEY` = your free key from football-data.org, then **Redeploy**. The first opening of the team picker then takes up to a minute, because the free key allows 10 requests a minute and the team list needs 12.
+It starts with simulated matches (`PROVIDER=mock`). For real ones: Vercel project → **Settings → Environment Variables**: `PROVIDER` = `football_data` and `FOOTBALL_DATA_API_KEY` = your free key from football-data.org, then **Redeploy**. On Vercel the backend follows the six biggest competitions (Premier League, LaLiga, Serie A, Bundesliga, Ligue 1, Champions League) so it stays within the free key's 10 requests a minute; set `FOOTBALL_DATA_COMPETITIONS` (for example `PL,PD,SA,BL1,FL1,CL,DED`) to change them.
 
 Vercel's Hobby plan is for non-commercial use: fine for testing, but the store launch with ads needs a paid host (PUBLISHING.md, section 2).
 

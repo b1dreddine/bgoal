@@ -5,6 +5,7 @@ minute. Scorers, cards, lineups and stats are only included on paid tiers; when 
 missing the backend still detects goals from score changes.
 Docs: https://www.football-data.org/documentation/api
 """
+import asyncio
 import logging
 from datetime import date, datetime, timedelta, timezone
 
@@ -264,9 +265,11 @@ class FootballDataProvider(HttpProvider):
         return rows
 
     async def list_competition_teams(self) -> list[tuple[Competition, list[Team]]]:
-        result = []
-        for code in self.competitions:
+        # In parallel: the rate limiter lets a burst through, so the app's team picker
+        # doesn't wait for one league after another.
+        async def one(code: str) -> tuple[Competition, list[Team]]:
             data = await self._get(f"/competitions/{code}/teams")
             comp = _competition(data["competition"], data.get("area") or (data["competition"].get("area")))
-            result.append((comp, [_team(t) for t in data.get("teams", [])]))
-        return result
+            return comp, [_team(t) for t in data.get("teams", [])]
+
+        return list(await asyncio.gather(*(one(code) for code in self.competitions)))
