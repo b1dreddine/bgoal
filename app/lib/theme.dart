@@ -90,5 +90,7 @@ class ScoreColors extends ThemeExtension<ScoreColors> {
 }
 
 extension ScoreColorsX on BuildContext {
-  ScoreColors get scoreColors => Theme.of(this).extension<ScoreColors>()!;
+  // Falls back to the defaults under a theme that doesn't carry them (tests, previews).
+  ScoreColors get scoreColors =>
+      Theme.of(this).extension<ScoreColors>() ?? ScoreColors.of(Theme.of(this).brightness);
 }

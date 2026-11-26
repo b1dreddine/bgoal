@@ -66,6 +66,10 @@ class NotificationsController {
 
   Future<void> start({required void Function(int matchId) openMatch}) async {
     _openMatch = openMatch;
+    // Settle "is onboarding done?" now: it's worked out from the followed teams the first
+    // time it's read, so reading it only after a team is followed during onboarding
+    // would wrongly say yes (and prompt in the middle of picking teams).
+    _ref.read(onboardingDoneProvider);
     await _push.init();
     await _refreshPermission();
     _subs

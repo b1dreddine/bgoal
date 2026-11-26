@@ -56,6 +56,11 @@ Future<SharedPreferences> freshPrefs([Map<String, Object> values = const {}]) {
 }
 
 Future<void> tapText(WidgetTester tester, String text) async {
+  // Rows further down a list aren't built until scrolled to (the team picker's list is
+  // the last scrollable on the screen).
+  if (find.text(text).evaluate().isEmpty) {
+    await tester.scrollUntilVisible(find.text(text), 200, scrollable: find.byType(Scrollable).last);
+  }
   await tester.ensureVisible(find.text(text));
   await tester.tap(find.text(text));
   await tester.pumpAndSettle();
@@ -133,7 +138,7 @@ void main() {
       'app_settings': jsonEncode({'theme': 'dark', 'language': 'fr'}),
     });
     await pumpFullApp(tester, prefs);
-    expect(find.text('Scores en direct'), findsOneWidget);
+    expect(find.text("Aujourd'hui"), findsOneWidget); // French home screen (the app name is BGoal in every language)
     final app = tester.widget<MaterialApp>(find.byType(MaterialApp));
     expect(app.themeMode, ThemeMode.dark);
     expect(app.locale, const Locale('fr'));
