@@ -2,6 +2,25 @@
 name = "livescores-backend"
 version = "1.0.0"
 requires-python = ">=3.11"
+# Same list as requirements.txt (used by the Docker image); keep both in sync.
+# Vercel installs from here.
+dependencies = [
+    "fastapi==0.115.6",
+    "uvicorn[standard]==0.32.1",
+    "sqlalchemy[asyncio]==2.0.36",
+    "asyncpg==0.30.0",
+    "aiosqlite==0.20.0",
+    "redis==5.2.1",
+    "fakeredis==2.26.2",
+    "httpx==0.28.1",
+    "pydantic-settings==2.7.0",
+    "firebase-admin==6.6.0",
+    "tzdata==2024.2",
+]
+
+# Free hosting on Vercel (see WEB_TESTING.md): this module turns on the serverless mode.
+[tool.vercel]
+entrypoint = "vercel_app:app"
 
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
