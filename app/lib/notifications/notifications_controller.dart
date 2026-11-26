@@ -27,8 +27,8 @@ final systemLanguageProvider = Provider<String>((ref) => PlatformDispatcher.inst
 /// Language for notification texts: the one chosen in Settings, else the phone's
 /// if the backend has it.
 final deviceLanguageProvider = Provider<String>((ref) {
-  final code = ref.watch(appSettingsProvider).languageCode ?? ref.watch(systemLanguageProvider);
-  return const ['en', 'fr', 'ar'].contains(code) ? code : 'en';
+  final String? code = ref.watch(appSettingsProvider).languageCode ?? ref.watch(systemLanguageProvider);
+  return code != null && const ['en', 'fr', 'ar'].contains(code) ? code : 'en';
 });
 
 final deviceSyncProvider = Provider<DeviceSync>(
