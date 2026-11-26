@@ -80,6 +80,8 @@ void main() {
     expect(find.text('1 match'), findsOneWidget);
     expect(find.text('Ajax'), findsNothing);
 
+    await tester.ensureVisible(button);
+    await tester.pumpAndSettle(); // built isn't on screen yet; show it, then tap
     await tester.tap(button);
     await tester.pumpAndSettle();
     await tester.scrollUntilVisible(find.text('Ajax'), 200, scrollable: list);
