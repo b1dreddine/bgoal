@@ -73,14 +73,16 @@ void main() {
     });
     await pumpApp(tester, const HomeScreen(), client: MockClient((_) async => jsonResponse(body)));
 
+    // The match list, not the date strip above it.
+    final list = find.descendant(of: find.byType(RefreshIndicator), matching: find.byType(Scrollable)).first;
     final button = find.text('Other competitions');
-    await tester.scrollUntilVisible(button, 200);
+    await tester.scrollUntilVisible(button, 200, scrollable: list);
     expect(find.text('1 match'), findsOneWidget);
     expect(find.text('Ajax'), findsNothing);
 
     await tester.tap(button);
     await tester.pumpAndSettle();
-    await tester.scrollUntilVisible(find.text('Ajax'), 200);
+    await tester.scrollUntilVisible(find.text('Ajax'), 200, scrollable: list);
     expect(find.text('Ajax'), findsOneWidget);
     expect(find.text('Hide other competitions'), findsOneWidget);
     await unmount(tester);

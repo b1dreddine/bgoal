@@ -52,7 +52,8 @@ void main() {
 
     await tester.tap(find.text('Arsenal FC'));
     await tester.pumpAndSettle();
-    await tester.scrollUntilVisible(find.text('Half-time'), 100, scrollable: find.byType(Scrollable).first);
+    await tester.ensureVisible(find.text('Half-time'));
+    await tester.pumpAndSettle(); // the jump only shows on the next frame
     await tester.tap(find.text('Half-time'));
     await tester.pumpAndSettle();
     expect(find.text('6 of 7 alerts on'), findsOneWidget);
