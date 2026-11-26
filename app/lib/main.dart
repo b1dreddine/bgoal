@@ -44,8 +44,16 @@ Future<void> main() async {
 
 Future<String> _deviceTimezone() async {
   try {
-    return await FlutterTimezone.getLocalTimezone();
-  } catch (_) {
-    return 'UTC';
-  }
+    final name = await FlutterTimezone.getLocalTimezone();
+    if (!(kIsWeb && name == 'UTC')) return name;
+  } catch (_) {}
+  return _zoneFromOffset(DateTime.now().timeZoneOffset);
+}
+
+/// Fallback (the web version can't read the zone's name): a fixed-offset zone, so day
+/// boundaries are the user's midnight. "Etc/GMT-1" is UTC+1: the sign is inverted.
+String _zoneFromOffset(Duration offset) {
+  if (offset.inMinutes % 60 != 0 || offset == Duration.zero) return 'UTC';
+  final hours = offset.inHours;
+  return 'Etc/GMT${hours > 0 ? '-' : '+'}${hours.abs()}';
 }
