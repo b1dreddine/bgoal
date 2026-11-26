@@ -16,6 +16,8 @@ class Settings(BaseSettings):
     provider: str = "mock"
     football_data_api_key: str = ""
     football_data_competitions: str = "PL,PD,SA,BL1,FL1,DED,PPL,ELC,CL,EC,WC,BSA"
+    # Competitions whose teams fill the app's team picker (empty: all of the above).
+    football_data_team_list_competitions: str = ""
     api_football_api_key: str = ""
     api_football_leagues: str = "39,140,135,78,61,2"  # league ids used for team sync
     api_football_season: int = 2026
@@ -62,15 +64,21 @@ class Settings(BaseSettings):
                 self.database_url = "sqlite+aiosqlite:////tmp/bgoal.db"
             if "redis_url" not in self.model_fields_set:
                 self.redis_url = "memory://"
-            if "football_data_competitions" not in self.model_fields_set:
-                # The biggest club competitions: each new serverless instance loads every
-                # league's team list, and the free key allows 10 requests a minute.
-                self.football_data_competitions = "PL,PD,SA,BL1,FL1,CL"
+            if "football_data_team_list_competitions" not in self.model_fields_set:
+                # Each new serverless instance loads the team list (one request per league)
+                # and the free key allows 10 requests a minute: only the biggest ones.
+                # Matches still come from every competition (one request either way).
+                self.football_data_team_list_competitions = "PL,PD,SA,BL1,FL1,CL"
         return self
 
     @property
     def competitions_list(self) -> list[str]:
         return [c.strip() for c in self.football_data_competitions.split(",") if c.strip()]
+
+    @property
+    def team_list_competitions_list(self) -> list[str]:
+        codes = [c.strip() for c in self.football_data_team_list_competitions.split(",") if c.strip()]
+        return codes or self.competitions_list
 
     @property
     def api_football_leagues_list(self) -> list[int]:

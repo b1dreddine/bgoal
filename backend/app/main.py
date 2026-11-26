@@ -9,7 +9,7 @@ from fastapi.middleware.gzip import GZipMiddleware
 
 from app.config import get_settings
 from app.db import create_all
-from app.routers import devices, matches, teams
+from app.routers import devices, images, matches, teams
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s")
 
@@ -45,6 +45,7 @@ app.add_middleware(
 app.include_router(matches.router)
 app.include_router(teams.router)
 app.include_router(devices.router)
+app.include_router(images.router)
 
 
 @app.get("/health")

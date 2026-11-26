@@ -127,7 +127,8 @@ class _NativeAdSlotState extends ConsumerState<NativeAdSlot> with AutomaticKeepA
       ),
       nativeTemplateStyle: NativeTemplateStyle(
         templateType: TemplateType.small,
-        mainBackgroundColor: scheme.surfaceContainerLow,
+        // Same as the match cards around it (theme.dart).
+        mainBackgroundColor: scheme.brightness == Brightness.light ? scheme.surfaceContainerLowest : scheme.surfaceContainer,
         cornerRadius: 12,
         callToActionTextStyle: NativeTemplateTextStyle(
           textColor: scheme.onPrimary,

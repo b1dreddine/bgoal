@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../data/models.dart';
 import '../../l10n/strings.dart';
 import '../../theme.dart';
+import '../../widgets/live_dot.dart';
 import '../../widgets/match_format.dart';
 import '../../widgets/team_crest.dart';
 
@@ -44,7 +45,7 @@ class MatchCard extends StatelessWidget {
           onTap: onTap,
           onLongPress: onLongPress,
           child: Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(8, 10, 12, 10),
+            padding: const EdgeInsetsDirectional.fromSTEB(8, 12, 16, 12),
             child: Row(
               children: [
                 ConstrainedBox(
@@ -109,15 +110,7 @@ class _StatusColumn extends StatelessWidget {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        if (status.isLive)
-          Padding(
-            padding: const EdgeInsets.only(bottom: 4),
-            child: Container(
-              width: 6,
-              height: 6,
-              decoration: BoxDecoration(color: color, shape: BoxShape.circle),
-            ),
-          ),
+        if (status.isLive) Padding(padding: const EdgeInsets.only(bottom: 4), child: LiveDot(color: color)),
         Text(
           status.label,
           textAlign: TextAlign.center,
@@ -188,9 +181,21 @@ class _TeamLine extends StatelessWidget {
         ),
         if (goals != null) ...[
           const SizedBox(width: 8),
-          Text(
-            '$goals',
-            style: style.copyWith(fontWeight: FontWeight.w700, fontFeatures: const [FontFeature.tabularFigures()]),
+          // A new score slides in from below, so a goal is noticed while scrolling.
+          AnimatedSwitcher(
+            duration: const Duration(milliseconds: 350),
+            transitionBuilder: (child, animation) => FadeTransition(
+              opacity: animation,
+              child: SlideTransition(
+                position: Tween(begin: const Offset(0, 0.6), end: Offset.zero).animate(animation),
+                child: child,
+              ),
+            ),
+            child: Text(
+              '$goals',
+              key: ValueKey(goals),
+              style: style.copyWith(fontWeight: FontWeight.w700, fontFeatures: const [FontFeature.tabularFigures()]),
+            ),
           ),
         ],
         if (penalties != null)

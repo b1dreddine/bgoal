@@ -46,6 +46,36 @@ void main() {
     expect([...kickoffs]..sort(), kickoffs);
   });
 
+  test('top competitions: UEFA cups, then the big five leagues; the rest are "other"', () {
+    Competition c(String name, {String? code, String? country}) =>
+        Competition(id: name.hashCode, name: name, code: code, country: country);
+
+    expect(topRank(c('UEFA Champions League', code: 'CL')), 0);
+    // Europa and Conference League are top even when the provider has no code for them.
+    expect(topRank(c('UEFA Europa League')), 1);
+    expect(topRank(c('UEFA Europa Conference League')), 2);
+    expect(topRank(c('Premier League', code: 'PL')), 3);
+    expect(topRank(c('La Liga', country: 'Spain')), 4);
+    expect(topRank(c('Ligue 1', code: 'FL1')), 7);
+    // Same name, other country: not the English Premier League.
+    expect(topRank(c('Premier League', country: 'Ukraine')), isNull);
+    expect(topRank(c('Eredivisie', code: 'DED')), isNull);
+    expect(topRank(c('AFC Champions League Elite')), isNull);
+
+    // Every competition in the day's fixture is a top one.
+    expect(buildSections(matches, const []).every((sec) => sec.isTop), isTrue);
+    final eredivisie = FootballMatch.fromJson({
+      ...(jsonDecode(File('test/fixtures/matches_day.json').readAsStringSync())['data'] as List).first
+          as Map<String, dynamic>,
+      'id': 1,
+      'competition': {'id': 2003, 'name': 'Eredivisie', 'code': 'DED', 'country': 'Netherlands'},
+    });
+    final sections = buildSections([...matches, eredivisie], const []);
+    expect(sections.last.competition!.code, 'DED');
+    expect(sections.last.isTop, isFalse);
+    expect(sections.where((sec) => !sec.isTop), hasLength(1));
+  });
+
   test('no favorites section when nothing followed', () {
     expect(buildSections(matches, const []).first.isFavorites, isFalse);
     expect(buildSections(const [], const [57]), isEmpty);

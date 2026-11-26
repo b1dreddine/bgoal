@@ -22,10 +22,16 @@ class TeamCrest extends StatelessWidget {
     if (u == null || u.isEmpty || !AppConfig.showCrests) {
       image = placeholder;
     } else if (u.toLowerCase().endsWith('.svg')) {
-      image = SvgPicture.network(u, width: size, height: size, placeholderBuilder: (_) => placeholder);
+      image = SvgPicture.network(
+        AppConfig.imageUrl(u),
+        width: size,
+        height: size,
+        placeholderBuilder: (_) => placeholder,
+        errorBuilder: (_, __, ___) => placeholder,
+      );
     } else {
       image = CachedNetworkImage(
-        imageUrl: u,
+        imageUrl: AppConfig.imageUrl(u),
         width: size,
         height: size,
         fit: BoxFit.contain,

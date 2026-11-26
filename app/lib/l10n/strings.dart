@@ -28,6 +28,9 @@ class S {
   String get tomorrow => _t('tomorrow');
   String get pickDate => _t('pickDate');
   String get yourTeams => _t('yourTeams');
+  String get otherCompetitions => _t('otherCompetitions');
+  String get hideOtherCompetitions => _t('hideOtherCompetitions');
+  String matchCount(int n) => _t(n == 1 ? 'matchCountOne' : 'matchCount', {'n': n});
   String get liveBadge => _t('liveBadge');
   String get noMatches => _t('noMatches');
   String get errorLoading => _t('errorLoading');
@@ -201,6 +204,10 @@ const Map<String, Map<String, String>> _strings = {
     'tomorrow': 'Tomorrow',
     'pickDate': 'Pick a date',
     'yourTeams': 'Your teams',
+    'otherCompetitions': 'Other competitions',
+    'hideOtherCompetitions': 'Hide other competitions',
+    'matchCountOne': '1 match',
+    'matchCount': '{n} matches',
     'liveBadge': 'LIVE',
     'noMatches': 'No matches on this day',
     'errorLoading': "Couldn't load matches. Check your connection.",
@@ -369,6 +376,10 @@ const Map<String, Map<String, String>> _strings = {
     'tomorrow': 'Demain',
     'pickDate': 'Choisir une date',
     'yourTeams': 'Vos équipes',
+    'otherCompetitions': 'Autres compétitions',
+    'hideOtherCompetitions': 'Masquer les autres compétitions',
+    'matchCountOne': '1 match',
+    'matchCount': '{n} matchs',
     'liveBadge': 'DIRECT',
     'noMatches': 'Aucun match ce jour-là',
     'errorLoading': 'Impossible de charger les matchs. Vérifiez votre connexion.',
@@ -537,6 +548,10 @@ const Map<String, Map<String, String>> _strings = {
     'tomorrow': 'غدًا',
     'pickDate': 'اختر تاريخًا',
     'yourTeams': 'فرقك',
+    'otherCompetitions': 'بطولات أخرى',
+    'hideOtherCompetitions': 'إخفاء البطولات الأخرى',
+    'matchCountOne': 'مباراة واحدة',
+    'matchCount': '{n} مباريات',
     'liveBadge': 'مباشر',
     'noMatches': 'لا توجد مباريات في هذا اليوم',
     'errorLoading': 'تعذّر تحميل المباريات. تحقّق من الاتصال.',

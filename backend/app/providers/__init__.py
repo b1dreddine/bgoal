@@ -13,7 +13,7 @@ def build_provider(settings: Settings) -> FootballProvider:
         if not settings.football_data_api_key:
             raise RuntimeError("FOOTBALL_DATA_API_KEY is required when PROVIDER=football_data")
         return FootballDataProvider(settings.football_data_api_key, settings.competitions_list,
-                                    settings.provider_requests_per_minute)
+                                    settings.provider_requests_per_minute, settings.team_list_competitions_list)
     if settings.provider == "api_football":
         from app.providers.api_football import ApiFootballProvider
 

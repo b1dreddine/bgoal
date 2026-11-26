@@ -29,6 +29,7 @@ final _backend = MockClient((req) async {
 /// The real app (router, theme, locale) with the network and Firebase faked.
 Future<FakePush> pumpFullApp(WidgetTester tester, SharedPreferences prefs) async {
   await initializeDateFormatting();
+  holdAnimationsStill(tester);
   final push = FakePush();
   await tester.pumpWidget(
     ProviderScope(

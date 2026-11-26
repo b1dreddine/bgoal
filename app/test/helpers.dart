@@ -70,6 +70,7 @@ Future<void> pumpApp(
   List<Override> overrides = const [],
 }) async {
   await initializeDateFormatting();
+  holdAnimationsStill(tester);
   SharedPreferences.setMockInitialValues(prefs);
   final sp = await SharedPreferences.getInstance();
   await tester.pumpWidget(
@@ -94,6 +95,13 @@ Future<void> pumpApp(
     ),
   );
   if (settle) await tester.pumpAndSettle();
+}
+
+/// Reduced motion, as a phone setting would ask: the live dot and loading shapes
+/// stop pulsing, so pumpAndSettle can settle.
+void holdAnimationsStill(WidgetTester tester) {
+  tester.platformDispatcher.accessibilityFeaturesTestValue = const FakeAccessibilityFeatures(disableAnimations: true);
+  addTearDown(tester.platformDispatcher.clearAccessibilityFeaturesTestValue);
 }
 
 /// Unmount so auto-refresh timers are cancelled before the test ends.

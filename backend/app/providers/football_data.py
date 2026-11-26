@@ -205,9 +205,12 @@ class FootballDataProvider(HttpProvider):
     name = "football_data"
     base_url = "https://api.football-data.org/v4"
 
-    def __init__(self, api_key: str, competitions: list[str], per_minute: int = 10):
+    def __init__(self, api_key: str, competitions: list[str], per_minute: int = 10,
+                 team_list_competitions: list[str] | None = None):
         super().__init__({"X-Auth-Token": api_key}, per_minute)
         self.competitions = competitions
+        # Teams for the app's picker: one request per competition, so possibly fewer.
+        self.team_list_competitions = team_list_competitions or competitions
         self._comp_filter = ",".join(competitions)
 
     async def get_matches_by_date(self, day: date) -> list[Match]:
@@ -272,4 +275,4 @@ class FootballDataProvider(HttpProvider):
             comp = _competition(data["competition"], data.get("area") or (data["competition"].get("area")))
             return comp, [_team(t) for t in data.get("teams", [])]
 
-        return list(await asyncio.gather(*(one(code) for code in self.competitions)))
+        return list(await asyncio.gather(*(one(code) for code in self.team_list_competitions)))

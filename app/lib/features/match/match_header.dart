@@ -4,6 +4,7 @@ import 'package:intl/intl.dart';
 import '../../data/models.dart';
 import '../../l10n/strings.dart';
 import '../../theme.dart';
+import '../../widgets/live_dot.dart';
 import '../../widgets/match_format.dart';
 import '../../widgets/team_crest.dart';
 import 'match_logic.dart';
@@ -162,11 +163,9 @@ class _ScoreColumn extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
                 if (status.isLive)
-                  Container(
-                    width: 6,
-                    height: 6,
-                    margin: const EdgeInsetsDirectional.only(end: 6),
-                    decoration: BoxDecoration(color: statusColor, shape: BoxShape.circle),
+                  Padding(
+                    padding: const EdgeInsetsDirectional.only(end: 6),
+                    child: LiveDot(color: statusColor),
                   ),
                 Text(
                   status.label,

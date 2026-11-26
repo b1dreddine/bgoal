@@ -60,6 +60,32 @@ void main() {
     await unmount(tester);
   });
 
+  testWidgets('other competitions stay behind a button until tapped', (tester) async {
+    // The day's fixture plus one Eredivisie match.
+    final body = fixtureBody('matches_day.json', (json) {
+      final list = json['data'] as List;
+      list.add({
+        ...(list.first as Map<String, dynamic>),
+        'id': 1,
+        'competition': {'id': 2003, 'name': 'Eredivisie', 'code': 'DED', 'country': 'Netherlands'},
+        'home': {...(list.first['home'] as Map<String, dynamic>), 'id': 670, 'name': 'Ajax', 'short_name': 'Ajax'},
+      });
+    });
+    await pumpApp(tester, const HomeScreen(), client: MockClient((_) async => jsonResponse(body)));
+
+    final button = find.text('Other competitions');
+    await tester.scrollUntilVisible(button, 200);
+    expect(find.text('1 match'), findsOneWidget);
+    expect(find.text('Ajax'), findsNothing);
+
+    await tester.tap(button);
+    await tester.pumpAndSettle();
+    await tester.scrollUntilVisible(find.text('Ajax'), 200);
+    expect(find.text('Ajax'), findsOneWidget);
+    expect(find.text('Hide other competitions'), findsOneWidget);
+    await unmount(tester);
+  });
+
   testWidgets('Arabic renders right-to-left', (tester) async {
     final client = MockClient((req) async => jsonResponse(dayBody()));
     await pumpApp(tester, const HomeScreen(), client: client, locale: const Locale('ar'));

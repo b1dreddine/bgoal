@@ -13,6 +13,11 @@ class AppConfig {
     return _isAndroid && !kIsWeb ? 'http://10.0.2.2:8000' : 'http://localhost:8000';
   }
 
+  /// Address to load a crest or emblem from. Browsers block images from the providers'
+  /// servers in a web app (CORS), so the web version gets them through the backend.
+  static String imageUrl(String url) =>
+      kIsWeb ? '$apiBaseUrl/img?url=${Uri.encodeQueryComponent(url)}' : url;
+
   /// Club crests and league emblems are trademarks. `--dart-define=SHOW_CRESTS=false`
   /// builds an app that shows team initials instead (see PUBLISHING.md).
   static const showCrests = bool.fromEnvironment('SHOW_CRESTS', defaultValue: true);

@@ -4,20 +4,58 @@ library;
 import '../../config.dart';
 import '../../data/models.dart';
 
-/// Big competitions first; anything else follows alphabetically.
-const competitionPriority = ['CL', 'PL', 'PD', 'SA', 'BL1', 'FL1', 'EC', 'WC', 'DED', 'PPL', 'ELC', 'BSA'];
+/// Shown on the home screen straight away, in this order: the European club cups,
+/// then the five big leagues (football-data.org codes).
+const topCompetitions = ['CL', 'EL', 'ECL', 'PL', 'PD', 'SA', 'BL1', 'FL1'];
+
+/// The rest sit behind "Other competitions", in this order, then alphabetically.
+const otherCompetitionOrder = ['EC', 'WC', 'DED', 'PPL', 'ELC', 'BSA'];
+
+/// Codes for the big leagues when a provider has none (API-Football names them).
+const _codeByNameAndCountry = {
+  ('Premier League', 'England'): 'PL',
+  ('La Liga', 'Spain'): 'PD',
+  ('LaLiga', 'Spain'): 'PD',
+  ('Primera Division', 'Spain'): 'PD',
+  ('Serie A', 'Italy'): 'SA',
+  ('Bundesliga', 'Germany'): 'BL1',
+  ('Ligue 1', 'France'): 'FL1',
+};
+
+/// Position in [topCompetitions], or null for the "other" ones. UEFA's club cups
+/// count as top whatever code the provider gives them.
+int? topRank(Competition c) {
+  final name = c.name.toLowerCase();
+  final code = c.code ??
+      _codeByNameAndCountry[(c.name, c.country)] ??
+      (!name.contains('uefa')
+          ? null
+          : name.contains('champions league')
+              ? 'CL'
+              : name.contains('conference league')
+                  ? 'ECL'
+                  : name.contains('europa league')
+                      ? 'EL'
+                      : null);
+  final i = topCompetitions.indexOf(code ?? '');
+  return i >= 0 ? i : null;
+}
 
 class MatchSection {
-  const MatchSection({required this.matches, this.competition, this.isFavorites = false});
+  const MatchSection({required this.matches, this.competition, this.isFavorites = false, this.isTop = true});
 
   /// Null for the "Your teams" section.
   final Competition? competition;
   final List<FootballMatch> matches;
   final bool isFavorites;
+
+  /// False for competitions shown behind the "Other competitions" button.
+  final bool isTop;
 }
 
 /// Favorites' matches are pinned in their own section at the top (and not repeated
-/// below); the rest is grouped by competition, each group sorted by kickoff.
+/// below); the rest is grouped by competition, each group sorted by kickoff. Top
+/// competitions come first; the others follow with `isTop: false`.
 List<MatchSection> buildSections(List<FootballMatch> matches, List<int> favoriteTeamIds) {
   final favs = favoriteTeamIds.toSet();
   int byKickoff(FootballMatch a, FootballMatch b) {
@@ -33,8 +71,10 @@ List<MatchSection> buildSections(List<FootballMatch> matches, List<int> favorite
   }
 
   int rank(Competition c) {
-    final i = competitionPriority.indexOf(c.code ?? '');
-    return i == -1 ? competitionPriority.length : i;
+    final top = topRank(c);
+    if (top != null) return top;
+    final i = otherCompetitionOrder.indexOf(c.code ?? '');
+    return topCompetitions.length + (i == -1 ? otherCompetitionOrder.length : i);
   }
 
   final competitions = groups.values.map((g) => g.first.competition).toList()
@@ -45,7 +85,8 @@ List<MatchSection> buildSections(List<FootballMatch> matches, List<int> favorite
 
   return [
     if (pinned.isNotEmpty) MatchSection(matches: pinned, isFavorites: true),
-    for (final c in competitions) MatchSection(competition: c, matches: groups[c.id]!..sort(byKickoff)),
+    for (final c in competitions)
+      MatchSection(competition: c, matches: groups[c.id]!..sort(byKickoff), isTop: topRank(c) != null),
   ];
 }
 

@@ -40,6 +40,28 @@ async def test_rate_limiter_lets_a_burst_through_then_respects_the_window():
     assert loop.time() - before >= 0.15
 
 
+def test_image_pass_through_only_serves_provider_images(monkeypatch):
+    from fastapi.testclient import TestClient
+
+    from app.routers import images
+
+    async def fake_fetch(url):
+        return b"\x89PNG...", "image/png"
+
+    monkeypatch.setattr(images, "fetch_image", fake_fetch)
+    client = TestClient(main.app)
+    ok = client.get("/img", params={"url": "https://crests.football-data.org/57.png"},
+                    headers={"Origin": "https://b1dreddine.github.io"})
+    assert ok.status_code == 200
+    assert ok.headers["content-type"] == "image/png"
+    assert "max-age" in ok.headers["cache-control"]
+    assert ok.headers["access-control-allow-origin"] in ("*", "https://b1dreddine.github.io")
+
+    for bad in ("https://example.com/a.png", "http://crests.football-data.org/57.png",
+                "https://crests.football-data.org.evil.com/57.png", "file:///etc/passwd"):
+        assert client.get("/img", params={"url": bad}).status_code == 400
+
+
 def test_on_vercel_defaults_to_sqlite_and_memory_cache(monkeypatch):
     monkeypatch.setenv("SERVERLESS", "true")
     monkeypatch.delenv("DATABASE_URL", raising=False)
@@ -47,6 +69,9 @@ def test_on_vercel_defaults_to_sqlite_and_memory_cache(monkeypatch):
     s = Settings(_env_file=None)
     assert s.database_url == "sqlite+aiosqlite:////tmp/bgoal.db"
     assert s.redis_url == "memory://"
+    # Matches from every competition (one request), team list from the biggest only.
+    assert "DED" in s.competitions_list
+    assert s.team_list_competitions_list == ["PL", "PD", "SA", "BL1", "FL1", "CL"]
     # Explicit settings still win.
     monkeypatch.setenv("REDIS_URL", "redis://cache:6379/0")
     assert Settings(_env_file=None).redis_url == "redis://cache:6379/0"
